@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>赛事详情</title>
@@ -12,14 +12,12 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet"/>
 		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"/>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 		<!-- 引入resetcss -->
 		<link rel="stylesheet" href="css/event_css/common/Normalize.css">
 		<!-- 引入页面css -->
 		<link rel="stylesheet" href="css/event_css/event_game.css">
 		<link rel="stylesheet" href="css/event_css/event_game_mobile.css">
 		<link rel="stylesheet" href="css/event_css/event_game_ipad.css">
-
 		<!-- 引入jQuery -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
 		<!-- 引入页面js -->
@@ -28,61 +26,198 @@
 		<link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<link rel="stylesheet" href="css/event_css/common/swiper.css">
-</head>
-<body>
+	</head>
+
+	<!-- 补充css -->
+	<style type="text/css">
+		/*背景图片*/
+		body {
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/bg-go.jpg");
+			background-size: contain;
+		}
 
 		
+		@media (max-width:1280px) {
+			body {
+				background-image: none;
+			}
 
+			.footer {
+				color:black !important;
+			}
+
+			.footer a {
+				color:black !important;
+			}
+		}
+
+
+	</style>
+	<body>
 		
-		<!-- 头部菜单栏 -->
-		<div class="container-fluid topnav text-center">
-			<div class="row align-items-center">
-				<div class="col-3">
-					<a  href="index.html">
-						<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/head_logo.png" class="asian_icon" alt="">
-					</a>
-				</div>
-				<div class="col-1"></div>
-				<div class="col-1">
-					<div class="topnav-evenbtn topnav-item">
-						<a  href="event.html">赛事</a>
-					</div>
-					
-				</div>
-				<div class="col-1">
-					<div class="topnav-schedulebtn topnav-item">
-						<a  href="schedule.html">赛程</a>
-					</div>
-				</div>
-				
-				
-				<div class="col-1">
-					<div class="topnav-adminbtn topnav-item">
-						<a  href="aboutus.html">aboutUS</a>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="row searchbtn ">
-						<div class="col-2"></div>
-						<div class="col-2">
-							<a href="event_game.html">
-								<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/btn_search.png" alt="">
-							</a>
-						</div>
-						<div class="col-3 ">
-							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
-						</div>
-						<div class="col-5"></div>
+		
+		<!-- 头部导航栏 -->
+		<style>
+			#chat-searchBtn {
+			z-index: 1;
+			padding: 10px;
+			background-color: #008CBA;
+			color: #fff;
+			cursor: pointer;
+			border-radius: 4px;
+			border: none;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			}
+			#chat-content {
+			position: fixed;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			display: none;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 4px;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			z-index: 1;
+			width: 400px;
+			height: calc(100% - 20px); /* 留出按钮的位置 */
+			}
+			#chat-iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			box-sizing: border-box;
+			}
+			.nav-link{
+			font-size: 17px;
+			
+			
+			}
+			.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 9999;
+			font-size: auto;
+			transition: top 0.3s ease-in-out;
+			}
+			.nav-link:hover{
+			transform: scale(1.2);
+			transition: transform 0.2s ease-in-out;
+			color:blue;
+			}
+			.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			
+			}
+			.logo {
+			filter: saturate(300%) contrast(120%);
+			}
+			.navbar-brand {
+			
+			width: 230px;
+			height: 50px;
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/logo2.jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 20px;
+			}
+			.separator {
+			border-left: 1px solid #ccc;
+			margin-left: 15px;
+			margin-right: 15px;
+			height: 20px;
+			}
+			@media (max-width: 768px) {
+			.separator{
+				border-left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			height: 0;
+			}
+			.nav-item{
+				height: 30px;
+			}
+			.navbar-nav{
+				margin-bottom: 10px;
+			}
+			}
+		</style>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand logo" href="index.html"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav flex-nowrap">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">主页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">资讯</a>
+						</li>
 						
+						<li class="nav-item">
+							<a class="nav-link" href="#">赛事</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">场馆</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">短视频</a>
+						</li>
+					</ul>
+					
+					<div class="separator"></div>
+					<button id="chat-searchBtn" onclick="showContent()" class="btn btn-outline-secondary">Chat</button>
+					<div id="chat-content">
+						<button onclick="hideContent()" class="btn btn-outline-secondary">返回</button>
+						<iframe id="chat-iframe" src=""></iframe>
 					</div>
-				</div>
-				<div class="col-2">
-					<div class="aboutUS topnav-item">
-						<a id="admin">管理员</a>
-					</div>
+					<script>
+					function showContent() {
+					var url = "https://chatmindai.aabiji.com/#/chat/1684761047947";
+					var content = document.getElementById("chat-content");
+					var iframe = document.getElementById("chat-iframe");
+					iframe.src = url;
+					content.style.display = "block";
+					document.body.style.width = "70%";
+					document.querySelector(".navbar").style.width = "70%";
+					}
+					function hideContent() {
+					document.getElementById("chat-content").style.display = "none";
+					document.getElementById("chat-iframe").src = "";
+					document.body.style.width = "100%";
+					document.querySelector(".navbar").style.width = "100%";
+					}
+					</script>
+					
+					<div class="separator"></div>
+					<a>G430</a>
 				</div>
 			</div>
-		</div>
+		</nav>
+		//实现上滑出现导航栏
+		<script>
+		$(document).ready(function(){
+		var previousScroll = 0;
+		
+		$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		
+		if(currentScroll < previousScroll) {//意味着上滑
+		$('.navbar').css('top', '0');
+		} else {
+		$('.navbar').css('top', '-80px');
+		}
+		previousScroll = currentScroll;
+		});
+		});
+		</script>
 		
 		<!-- 头部视频 -->
 		<div class="top_video">
@@ -105,15 +240,13 @@
 					<img src="https://www.hangzhou2022.cn/sssg/ssxm/202203/W020220408389476063091.jpg" alt="" class="intro_img">
 					
 					<li class="intro_box">
-
 						<div class="intro_txt1 intro_txt">
 							<p>围棋，中国传统棋种，也是国际通行棋种，属于策略型双人对抗性智力游戏，流行于中、日、韩等东亚国家。</p>
 							<p>中国古时称“弈”，西方名称为“Go”。</p>
 							<p>起源于中国，春秋战国时期即有记载，是中华民族发明的迄今最久远、最复杂的智力博弈活动之一，为琴棋书画四艺之一。</p>
 							<p>隋唐时经朝鲜传入日本，流传到欧美各国。</p>
-
 						</div>
-							
+						
 						
 						
 						<div class="intro_txt2 intro_txt">
@@ -129,14 +262,163 @@
 			</div>
 			
 		</div>
+
+		<!-- 奖牌榜 -->
+		<main class="main" >
+			<!-- 项目奖牌 -->
+			<div class="event_medal">
+				<div class="event_total_medal">
+					<div class="total_medal-top">
+						<h1 class="total_medal_tle">项目国家榜</h1>
+						<input id="countryname" type="text" placeholder="输入国家名">
+					</div>
+					<div class="total_medal_schedule">
+						<table cellspacing="0" cellpadding="0" id="table_head">
+							<thead>
+								<tr>
+									<th width="80">名次</th>
+									<th width="180">国家/地区</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="80">铜</th>
+									<th width="82">总数</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="medel_range_table">
+								<tbody>
+									<tr>
+										<th width="80">1</th>
+										<th width="180">中国</th>
+										<th width="80">2</th>
+										<th width="80">0</th>
+										<th width="80">1</th>
+										<th width="80">3</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">韩国</th>
+										<th width="80">0</th>
+										<th width="80">2</th>
+										<th width="80">1</th>
+										<th width="80">3</th>
+									</tr>
+
+									<tr>
+										<th width="80">3</th>
+										<th width="180">日本</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									
+
+									<tr>
+										<th width="80">3</th>
+										<th width="180">印度</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">3</th>
+										<th width="180">菲律宾</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">3</th>
+										<th width="180">越南</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">3</th>
+										<th width="180">新加坡</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+				</div>
+				<div class="event_detail_medal">
+					<div class="detail_medal-top">
+						<h1 class="detail_medal_tle">项目奖牌榜</h1>
+						<input id="eventname" type="text" placeholder="输入项目名">
+					</div>
+					<div class="total_medal_schedule" id="table_head">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th width="80">日期</th>
+									<th width="80">时间</th>
+									<th width="180">项目名称</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="82">铜</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="event_medal_table">
+								<tbody>
+									<tr>
+										<th width="80">7-22</th>
+										<th width="80">09:00</th>
+										<th width="180">男子围棋</th>
+										<th width="80">柯洁</th>
+										<th width="80">申真谞</th>
+										<th width="82">杨鼎新</th>
+									</tr>
+
+									<tr>
+										<th width="80">7-22</th>
+										<th width="80">16:00</th>
+										<th width="180">女子围棋</th>
+										<th width="82">於之莹</th>
+										<th width="80">崔精</th>
+										<th width="80">吴侑珍</th>
+										
+									</tr>
 		
-			
-				
+								</tbody>
+							</table>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		
+		
 		<!-- 赛事列表 -->
 		<div class="main">
 			<!-- 项目选择轮播 -->
 			<div class="event_list">
-				<h1>亚运项目</h1>
+				<div class="event_schedule-top" >
+					<h1 class="event_schedule_tle">项目赛程</h1>
+					<input class="schedule_eventname" id="evenserch" type="text" placeholder="输入项目名称">
+				</div>
 				<div class="swiper-event-box">
 					<div class="swiper-container" id="swiper-container-event">
 						<div class="swiper-wrapper" id="swiper-wrapper-event">
@@ -168,14 +450,13 @@
 												<p>游泳</p>
 											</div>
 										</li>
-
 										<li>
 											<a href="event_Go.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event24.jpg" alt=""></a>
 											<div class="select_img_txt_box">
 												<p>围棋</p>
 											</div>
 										</li>
-									
+										
 										
 										
 										
@@ -313,8 +594,7 @@
 												<p>武术</p>
 											</div>
 										</li>
-
-											<li>
+										<li>
 											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event6.jpg" alt=""></a>
 											<div class="select_img_txt_box">
 												<p>足球</p>
@@ -380,226 +660,318 @@
 			</div>
 		</div>
 
-		<!-- 冠军列表 -->
-		</div>
-			<div class="main">
-			<!-- 项目选择轮播 -->
-			<div class="champion_list">
-				<h1>项目冠军</h1>
-				<div class="swiper-champion-box">
-					<div class="swiper-container" id="swiper-container-champion">
-
-						<div class="swiper-wrapper" >
-							<div class="swiper-slide">
-								<div class="champion_select">
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E6%9F%AF%E6%B4%81/5037756?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/kejie.jpg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>柯洁</p>
-											<p>1997年8月2日出生于浙江省丽水市莲都区</p>
-											<p>现役中国围棋队</p>
-											<p>中国围棋九段棋手</p>
-											<p>2014年gorating等级分首次排名第一</p>
-											<p>连续四十个月排名人类围棋世界第一</p>
-											<p>中国围棋史上最年轻的八冠王</p>
-											
-	
-										</div>
-									</li>
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E7%94%B3%E7%9C%9F%E8%B0%9E/12000953?lemmaFrom=lemma_starMap&fromModule=lemma_starMap">
-											<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/shenzhenxu.jpg" alt="">
-										</a>
-										<div class="select_img_txt_box">
-											<p>申真谞</p>
-											<p>2000年3月17日出生于韩国釜山</p>
-											<p>现役韩国围棋队</p>
-											<p>韩国围棋职业九段棋手</p>
-											<p>00后首位加冕世界冠军的棋手</p>
-											<p>2022世界大赛个人第四冠</p>
-											<p>2023世界围棋等级分排名第一</p>
-											
-											
-										</div>
-									</li>
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E6%9D%A8%E9%BC%8E%E6%96%B0/10324132?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/yangdingxin.jpeg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>杨鼎新</p>
-											<p>1998年10月出生于中国河南郑州</p>
-											<p>现役中国围棋队</p>
-											<p>中国围棋九段棋手</p>
-											<p>打破世界围棋职业入段最年少纪录</p>
-											<p>2019杨鼎新LG杯世界围棋棋王战冠军</p>
-											<p>2020成为新晋“天元”</p>
-											
-										</div>
-									</li>
-									
-									
-								</div>
-								
-							</div>
-							<div class="swiper-slide">
-								<div class="champion_select">
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E8%BF%9E%E7%AC%91/11028635?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/lianxiao.jpg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>连笑</p>
-											<p>1994年4月8日出生于辽宁省丹东市</p>
-											<p>现役中国围棋队</p>
-											<p>中国围棋职业九段</p>
-											<p>2015历史第九位名人战冠军</p>
-											<P>2017将天元头衔收入囊中</P>
-											<p>2018获得棋圣战冠军</p>
-											
-										</div>
-									</li>
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E5%8F%A4%E5%8A%9B/31407?fromModule=lemma_search-box"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/guli.jpeg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>古力</p>
-											<p>1983年2月3日出生于中国重庆</p>
-											<p>现役中国围棋队</p>
-											<p>中国围棋职业九段棋手</p>											
-											<P>2006第10届LG杯世界围棋棋王战冠军</P>
-											<p>2010三星杯个人第七个世界大赛冠军</p>
-											<P>2015成就世界围棋“八冠王”</P>
-											
-										</div>
-									</li>
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E6%9D%8E%E4%B8%96%E7%9F%B3?fromModule=lemma_search-box"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/lishishi.jpg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>李世石</p>
-											<p>1983年3月2日 出生于韩国全罗南道</p>
-											<p>2019年正式宣布退役</p>
-											<p>中国男子乒乓球队运动员</p>
+		<!-- 项目赛程 -->
+		<div class="main">
+			<div class="event_schedule_and_medal" id="event_schedule_and_medal_new">
+				<div class="event_schedule " id="event_schedule_new">
+					<div class="event_schedule-top" >
+						<h1 class="event_schedule_tle">项目赛程</h1>
+						<input id="schedule_eventname" type="text" placeholder="输入项目或国家">
+					</div>
+					<div class="event_schedule_table">
+						<div class="day">
+							<!-- 表头 -->
+							<table cellspacing="0" cellpadding="0" width="100%">
+								<thead>
+									<tr>
+										<th width="100">时间</th>
+										<th width="119">大项</th>
+										<th width="198">比赛</th>
+										<th width="118">场馆</th>
+										<th width="89">比赛状态</th>
+										<th width="122">数据</th>
+									</tr>
+								</thead>
+							</table>
+							<!-- 项目赛程 -->
+							<div class="scrollbar_schedule" id="scrollbar_event_schedule">
+								<table cellspacing="0" cellpadding="0" width="100%" id="schedule_event_table">
+									<tbody id="event_list">
+										<tr>
+											<td width="100">7月23日 09:00</td>
+											<td width="120">围棋</td>
+											<td width="200">女子围棋16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
 										
-											<p>世界围棋14冠王</p>
-											<P>2016年（AlphaGo）以总比分1:4落败</P>
-											<p>2017年世界围棋名人冠军</p>
-											
-										</div>
-									</li>
-									
-									
-								</div>
-								
+										<tr>
+											<td width="100">7月23日 09:00</td>
+											<td width="120">围棋</td>
+											<td width="200">男子围棋16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+										<tr>
+											<td width="100">7月26日 09:00</td>
+											<td width="120">围棋</td>
+											<td width="200">女子围棋8强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月26日 16:00</td>
+											<td width="120">围棋</td>
+											<td width="200">男子男子围棋8强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月29日 09:00</td>
+											<td width="120">围棋</td>
+											<td width="200">女子围棋4强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+										<tr>
+											<td width="100">7月29日 09:00</td>
+											<td width="120">围棋</td>
+											<td width="200">男子围棋4强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+									</tbody>
+								</table>
 							</div>
 						</div>
-
-						<div class="swiper-pagination" id="pagination-champion"></div>
-						<div class="swiper-button-prev" id="swiper-champion-prev"></div>
-						<div class="swiper-button-next" id="swiper-champion-next"></div>
-
 					</div>
 				</div>
-				
 			</div>
 		</div>
 
-		<!-- 底部联系和更多支持 -->
-		<div class="footer main">
-			<div class="footer_line"></div>
-			<div class="footer-content">
-
-				<div class="footer-content-lt">
-					<p>2022年第19届亚运会杭师大开发小组</p>
-					<p>中国浙江省杭州市余杭区杭师大仓前校区</p>
-					<p>邮编：310016</p>
-					<p>联系方式：hml2535541929@163.com</p>
-
-					<div class="sjmt_box">
-						<div>
-							<img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive">
-							<img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img">
+		<!-- 冠军列表 -->
+	</div>
+	<div class="main">
+		<!-- 项目选择轮播 -->
+		<div class="champion_list">
+			<h1>项目冠军</h1>
+			<div class="swiper-champion-box">
+				<div class="swiper-container" id="swiper-container-champion">
+					<div class="swiper-wrapper" >
+						<div class="swiper-slide">
+							<div class="champion_select">
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E6%9F%AF%E6%B4%81/5037756?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/kejie.jpg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>柯洁</p>
+										<p>1997年8月2日出生于浙江省丽水市莲都区</p>
+										<p>现役中国围棋队</p>
+										<p>中国围棋九段棋手</p>
+										<p>2014年gorating等级分首次排名第一</p>
+										<p>连续四十个月排名人类围棋世界第一</p>
+										<p>中国围棋史上最年轻的八冠王</p>
+										
+										
+									</div>
+								</li>
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E7%94%B3%E7%9C%9F%E8%B0%9E/12000953?lemmaFrom=lemma_starMap&fromModule=lemma_starMap">
+										<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/shenzhenxu.jpg" alt="">
+									</a>
+									<div class="select_img_txt_box">
+										<p>申真谞</p>
+										<p>2000年3月17日出生于韩国釜山</p>
+										<p>现役韩国围棋队</p>
+										<p>韩国围棋职业九段棋手</p>
+										<p>00后首位加冕世界冠军的棋手</p>
+										<p>2022世界大赛个人第四冠</p>
+										<p>2023世界围棋等级分排名第一</p>
+										
+										
+									</div>
+								</li>
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E6%9D%A8%E9%BC%8E%E6%96%B0/10324132?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/yangdingxin.jpeg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>杨鼎新</p>
+										<p>1998年10月出生于中国河南郑州</p>
+										<p>现役中国围棋队</p>
+										<p>中国围棋九段棋手</p>
+										<p>打破世界围棋职业入段最年少纪录</p>
+										<p>2019杨鼎新LG杯世界围棋棋王战冠军</p>
+										<p>2020成为新晋“天元”</p>
+										
+									</div>
+								</li>
+								
+								
+							</div>
+							
 						</div>
-						<div>
-							<img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive">
-							<img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img">
+						<div class="swiper-slide">
+							<div class="champion_select">
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E8%BF%9E%E7%AC%91/11028635?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/lianxiao.jpg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>连笑</p>
+										<p>1994年4月8日出生于辽宁省丹东市</p>
+										<p>现役中国围棋队</p>
+										<p>中国围棋职业九段</p>
+										<p>2015历史第九位名人战冠军</p>
+										<P>2017将天元头衔收入囊中</P>
+										<p>2018获得棋圣战冠军</p>
+										
+									</div>
+								</li>
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E5%8F%A4%E5%8A%9B/31407?fromModule=lemma_search-box"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/guli.jpeg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>古力</p>
+										<p>1983年2月3日出生于中国重庆</p>
+										<p>现役中国围棋队</p>
+										<p>中国围棋职业九段棋手</p>
+										<P>2006第10届LG杯世界围棋棋王战冠军</P>
+										<p>2010三星杯个人第七个世界大赛冠军</p>
+										<P>2015成就世界围棋“八冠王”</P>
+										
+									</div>
+								</li>
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E6%9D%8E%E4%B8%96%E7%9F%B3?fromModule=lemma_search-box"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_Go/lishishi.jpg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>李世石</p>
+										<p>1983年3月2日 出生于韩国全罗南道</p>
+										<p>2019年正式宣布退役</p>
+										<p>中国男子乒乓球队运动员</p>
+										
+										<p>世界围棋14冠王</p>
+										<P>2016年（AlphaGo）以总比分1:4落败</P>
+										<p>2017年世界围棋名人冠军</p>
+										
+									</div>
+								</li>
+								
+								
+							</div>
+							
 						</div>
-						<div>
-							<img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive">
-							<img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img">
-						</div>
-						<div>
-							<img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive">
-							<img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img">
-						</div>
-
-						<div class="linkbox">
-							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="">
-							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="">
-							<img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="">
-							<img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="">
-						</div>
-					</div>	
-
+					</div>
+					<div class="swiper-pagination" id="pagination-champion"></div>
+					<div class="swiper-button-prev" id="swiper-champion-prev"></div>
+					<div class="swiper-button-next" id="swiper-champion-next"></div>
 				</div>
-
-				<!-- hover切换图片 -->
-				<script type="text/javascript">
-					$(document).ready(function() {
-					  // 当鼠标移动到包含图片的div上时
-					  $('.sjmt_box div').hover(function() {
-					    // 使用toggleClass()方法切换.active类
-					    $(this).find('.sjmt_img').toggleClass('disactive');
-					  });
-					});
-				</script>
-
-				<!-- hover显示二维码 -->
-				<script>
-					$(document).ready(function() {
-					  // 当鼠标移动到包含图片的div上时
-					  $('.sjmt_box div').mouseenter(function() {
-					    // 获取当前div的索引
-					    var index = $(this).index();
-					    // 显示相应的二维码
-					    $('.linkbox img').eq(index).show();
-					  }).mouseleave(function() {
-					    // 隐藏所有二维码
-					    $('.linkbox img').hide();
-					  });
-					});
-				</script>
-
-				<div class="footer-content-rt">
-					<li>
-						<a href="https://olympics.com/en/">国际奥委会</a>
-					</li>
-					<li>
-						<a href="https://ocasia.org/">亚奥理事会</a>
-					</li>
-					<li>
-						<a href="http://www.olympic.cn/">中奥理事会</a>
-					</li>
-					<li>
-						<a href="https://www.sport.gov.cn/">国家体育总局</a>
-					</li>
-					
-				</div>
-				
-			</div>
-
-
-			<div class="footer-rt-bottom">
-				<p>Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved</p>
-				<span>备案号：浙ICP备11041366号-13</span>
-				<span>浙公网安备：33010302003135号</span>
 			</div>
 			
 		</div>
-
-		<div class="bottomgap"></div>
-
+	</div>
+	<!-- 底部联系和更多支持 -->
+	<div class="footer main">
+		<!-- <div class="footer_line"></div> -->
+		<div class="footer-content">
+			<div class="footer-content-lt">
+				<p>2022年第19届亚运会杭师大开发小组</p>
+				<p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+				<p>邮编：310016</p>
+				<p>联系方式：hml2535541929@163.com</p>
+				<div class="sjmt_box">
+					<div>
+						<img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive">
+						<img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img">
+					</div>
+					<div>
+						<img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive">
+						<img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img">
+					</div>
+					<div>
+						<img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive">
+						<img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img">
+					</div>
+					<div>
+						<img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive">
+						<img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img">
+					</div>
+					<div class="linkbox">
+						<img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="">
+						<img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="">
+						<img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="">
+						<img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- hover切换图片 -->
+			<script type="text/javascript">
+				$(document).ready(function() {
+				// 当鼠标移动到包含图片的div上时
+				$('.sjmt_box div').hover(function() {
+				// 使用toggleClass()方法切换.active类
+				$(this).find('.sjmt_img').toggleClass('disactive');
+				});
+				});
+			</script>
+			<!-- hover显示二维码 -->
+			<script>
+				$(document).ready(function() {
+				// 当鼠标移动到包含图片的div上时
+				$('.sjmt_box div').mouseenter(function() {
+				// 获取当前div的索引
+				var index = $(this).index();
+				// 显示相应的二维码
+				$('.linkbox img').eq(index).show();
+				}).mouseleave(function() {
+				// 隐藏所有二维码
+				$('.linkbox img').hide();
+				});
+				});
+			</script>
+			<div class="footer-content-rt">
+				<li>
+					<a href="https://olympics.com/en/">国际奥委会</a>
+				</li>
+				<li>
+					<a href="https://ocasia.org/">亚奥理事会</a>
+				</li>
+				<li>
+					<a href="http://www.olympic.cn/">中奥理事会</a>
+				</li>
+				<li>
+					<a href="https://www.sport.gov.cn/">国家体育总局</a>
+				</li>
+				
+			</div>
+			
+		</div>
+		<div class="footer-rt-bottom">
+			<p>Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved</p>
+			<span>备案号：浙ICP备11041366号-13</span>
+			<span>浙公网安备：33010302003135号</span>
+		</div>
 		
-
-		
+	</div>
+	<div class="bottomgap"></div>
+	
+	
 </body>
 </html>

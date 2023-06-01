@@ -27,64 +27,204 @@
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<link rel="stylesheet" href="css/event_css/common/swiper.css">
 	</head>
+
+	<!-- 补充css -->
+	<style type="text/css">
+		/*背景图片*/
+		body {
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_game/bg-game3.jpg");
+			background-size: contain;
+		}
+
+		
+		@media (max-width:1280px) {
+			body {
+				background-image: none;
+			}
+
+			.footer {
+				color:black !important;
+			}
+
+			.footer a {
+				color:black !important;
+			}
+		}
+
+	</style>
+
 	<body>
 		
 		
-		<!-- 头部菜单栏 -->
-		<div class="container-fluid topnav text-center">
-			<div class="row align-items-center">
-				<div class="col-3">
-					<a  href="index.html">
-						<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/head_logo.png" class="asian_icon" alt="">
-					</a>
-				</div>
-				<div class="col-1"></div>
-				<div class="col-1">
-					<div class="topnav-evenbtn topnav-item">
-						<a  href="event.html">赛事</a>
-					</div>
-					
-				</div>
-				<div class="col-1">
-					<div class="topnav-schedulebtn topnav-item">
-						<a  href="schedule.html">赛程</a>
-					</div>
-				</div>
-				
-				
-				<div class="col-1">
-					<div class="topnav-adminbtn topnav-item">
-						<a  href="aboutus.html">aboutUS</a>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="row searchbtn ">
-						<div class="col-2"></div>
-						<div class="col-2">
-							<a href="event_game.html">
-								<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/btn_search.png" alt="">
-							</a>
-						</div>
-						<div class="col-3 ">
-							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
-						</div>
-						<div class="col-5"></div>
+		<!-- 头部导航栏 -->
+		<style>
+			#chat-searchBtn {
+			z-index: 1;
+			padding: 10px;
+			background-color: #008CBA;
+			color: #fff;
+			cursor: pointer;
+			border-radius: 4px;
+			border: none;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			}
+			#chat-content {
+			position: fixed;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			display: none;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 4px;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			z-index: 1;
+			width: 400px;
+			height: calc(100% - 20px); /* 留出按钮的位置 */
+			}
+			#chat-iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			box-sizing: border-box;
+			}
+			.nav-link{
+			font-size: 17px;
+			
+			
+			}
+			.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 9999;
+			font-size: auto;
+			transition: top 0.3s ease-in-out;
+			}
+			.nav-link:hover{
+			transform: scale(1.2);
+			transition: transform 0.2s ease-in-out;
+			color:blue;
+			}
+			.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			
+			}
+			.logo {
+			filter: saturate(300%) contrast(120%);
+			}
+			.navbar-brand {
+			
+			width: 230px;
+			height: 50px;
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/logo2.jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 20px;
+			}
+			.separator {
+			border-left: 1px solid #ccc;
+			margin-left: 15px;
+			margin-right: 15px;
+			height: 20px;
+			}
+			@media (max-width: 768px) {
+			.separator{
+				border-left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			height: 0;
+			}
+			.nav-item{
+				height: 30px;
+			}
+			.navbar-nav{
+				margin-bottom: 10px;
+			}
+			}
+		</style>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand logo" href="index.html"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav flex-nowrap">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">主页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">资讯</a>
+						</li>
 						
+						<li class="nav-item">
+							<a class="nav-link" href="#">赛事</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">场馆</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">短视频</a>
+						</li>
+					</ul>
+					
+					<div class="separator"></div>
+					<button id="chat-searchBtn" onclick="showContent()" class="btn btn-outline-secondary">Chat</button>
+					<div id="chat-content">
+						<button onclick="hideContent()" class="btn btn-outline-secondary">返回</button>
+						<iframe id="chat-iframe" src=""></iframe>
 					</div>
-				</div>
-				<div class="col-2">
-					<div class="aboutUS topnav-item">
-						<a id="admin">管理员</a>
-					</div>
+					<script>
+					function showContent() {
+					var url = "https://chatmindai.aabiji.com/#/chat/1684761047947";
+					var content = document.getElementById("chat-content");
+					var iframe = document.getElementById("chat-iframe");
+					iframe.src = url;
+					content.style.display = "block";
+					document.body.style.width = "70%";
+					document.querySelector(".navbar").style.width = "70%";
+					}
+					function hideContent() {
+					document.getElementById("chat-content").style.display = "none";
+					document.getElementById("chat-iframe").src = "";
+					document.body.style.width = "100%";
+					document.querySelector(".navbar").style.width = "100%";
+					}
+					</script>
+					
+					<div class="separator"></div>
+					<a>G430</a>
 				</div>
 			</div>
-		</div>
+		</nav>
+		//实现上滑出现导航栏
+		<script>
+		$(document).ready(function(){
+		var previousScroll = 0;
+		
+		$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		
+		if(currentScroll < previousScroll) {//意味着上滑
+		$('.navbar').css('top', '0');
+		} else {
+		$('.navbar').css('top', '-80px');
+		}
+		previousScroll = currentScroll;
+		});
+		});
+		</script>
 		
 		<!-- 头部视频 -->
 		<div class="top_video">
 			<video src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_game/lol.mp4"controls  muted>
 			</video>
 		</div>
+
 		<!-- 赛事介绍 -->
 		<div class="main" >
 			<p class="event_tle">杭州亚运会项目-电子竞技</p>
@@ -121,15 +261,157 @@
 					
 				</div>
 			</div>
-			
 		</div>
-		
+
+		<!-- 奖牌榜 -->
+		<main class="main" >
+			<!-- 项目奖牌 -->
+			<div class="event_medal">
+				<div class="event_total_medal">
+					<div class="total_medal-top">
+						<h1 class="total_medal_tle">项目国家榜</h1>
+						<input id="countryname" type="text" placeholder="输入国家名">
+					</div>
+					<div class="total_medal_schedule">
+						<table cellspacing="0" cellpadding="0" id="table_head">
+							<thead>
+								<tr>
+									<th width="80">名次</th>
+									<th width="180">国家/地区</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="80">铜</th>
+									<th width="82">总数</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="medel_range_table">
+								<tbody>
+									<tr>
+										<th width="80">1</th>
+										<th width="180">中国</th>
+										<th width="80">2</th>
+										<th width="80">2</th>
+										<th width="80">1</th>
+										<th width="80">5</th>
+									</tr>
+									<tr>
+										<th width="80">2</th>
+										<th width="180">印度</th>
+										<th width="80">1</th>
+										<th width="80">0</th>
+										<th width="80">1</th>
+										<th width="80">2</th>
+									</tr>
+									
+									<tr>
+										<th width="80">3</th>
+										<th width="180">韩国</th>
+										<th width="80">0</th>
+										<th width="80">1</th>
+										<th width="80">1</th>
+										<th width="80">2</th>
+									</tr>
+
+									<tr>
+										<th width="80">4</th>
+										<th width="180">菲律宾</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">4</th>
+										<th width="180">越南</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">4</th>
+										<th width="180">新加坡</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+				</div>
+				<div class="event_detail_medal">
+					<div class="detail_medal-top">
+						<h1 class="detail_medal_tle">项目奖牌榜</h1>
+						<input id="eventname" type="text" placeholder="输入项目名">
+					</div>
+					<div class="total_medal_schedule" id="table_head">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th width="80">日期</th>
+									<th width="80">时间</th>
+									<th width="180">项目名称</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="82">铜</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="event_medal_table">
+								<tbody>
+									<tr>
+										<th width="80">7-21</th>
+										<th width="80">10:00</th>
+										<th width="180">英雄联盟</th>
+										<th width="80">JDG</th>
+										<th width="80">T1</th>
+										<th width="82">BLG</th>
+									</tr>
+									<tr>
+										<th width="80">7-22</th>
+										<th width="80">13:00</th>
+										<th width="180">王者荣耀</th>
+										<th width="80">JDG</th>
+										<th width="80">BLG</th>
+										<th width="82">T1</th>
+									</tr>
+									<tr>
+										<th width="80">7-23</th>
+										<th width="80">09:00</th>
+										<th width="180">和平精英</th>
+										<th width="80">CMD</th>
+										<th width="80">BLG</th>
+										<th width="82">AMD</th>
+									</tr>
+									
+									
+									
+								</tbody>
+							</table>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</main>
 		
 		<!-- 赛事列表 -->
 		<div class="main">
 			<!-- 项目选择轮播 -->
 			<div class="event_list">
-				<h1>亚运项目</h1>
+				<div class="event_schedule-top" >
+					<h1 class="event_schedule_tle">项目赛程</h1>
+					<input class="schedule_eventname" id="evenserch" type="text" placeholder="输入项目名称">
+				</div>
 				<div class="swiper-event-box">
 					<div class="swiper-container" id="swiper-container-event">
 						<div class="swiper-wrapper" id="swiper-wrapper-event">
@@ -370,10 +652,115 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- 项目赛程 -->
+		<div class="main">
+			<div class="event_schedule_and_medal" id="event_schedule_and_medal_new">
+				<div class="event_schedule " id="event_schedule_new">
+					<div class="event_schedule-top" >
+						<h1 class="event_schedule_tle">项目赛程</h1>
+						<input id="schedule_eventname" type="text" placeholder="输入项目或国家">
+					</div>
+					<div class="event_schedule_table">
+						<div class="day">
+							<!-- 表头 -->
+							<table cellspacing="0" cellpadding="0" width="100%">
+								<thead>
+									<tr>
+										<th width="100">时间</th>
+										<th width="119">大项</th>
+										<th width="198">比赛</th>
+										<th width="118">场馆</th>
+										<th width="89">比赛状态</th>
+										<th width="122">数据</th>
+									</tr>
+								</thead>
+							</table>
+							<!-- 项目赛程 -->
+							<div class="scrollbar_schedule" id="scrollbar_event_schedule">
+								<table cellspacing="0" cellpadding="0" width="100%" id="schedule_event_table">
+									<tbody id="event_list">
+										<tr>
+											<td width="100">7月21日 09:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">英雄联盟 中国 VS 韩国</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="_blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月21日 13:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">王者荣耀 越南 VS 菲律宾</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										
+										
+										<tr>
+											<td width="100">7月21日 16:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">和平精英 印度 VS 日本</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										<tr>
+											<td width="100">7月22日 09:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">王者荣耀 韩国 VS 沙特阿拉伯</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月22日 16:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">和平精英 中国 VS 日本</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										
+										
+										<tr>
+											<td width="100">7月23日 09:00</td>
+											<td width="120">电子竞技</td>
+											<td width="200">英雄联盟 中国 VS 韩国</td>
+											<td width="120">杭州电竞中心</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">成绩公报</a>
+											</td>
+										</tr>
+										
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<!-- 冠军列表 -->
 	</div>
 	<div class="main">
-		<!-- 项目选择轮播 -->
+		<!-- 冠军选择轮播 -->
 		<div class="champion_list">
 			<h1>项目冠军</h1>
 			<div class="swiper-champion-box">
@@ -487,12 +874,11 @@
 					<div class="swiper-button-next" id="swiper-champion-next"></div>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 	<!-- 底部联系和更多支持 -->
 	<div class="footer main">
-		<div class="footer_line"></div>
+		<!-- <div class="footer_line"></div> -->
 		<div class="footer-content">
 			<div class="footer-content-lt">
 				<p>2022年第19届亚运会杭师大开发小组</p>
@@ -571,8 +957,8 @@
 			<span>备案号：浙ICP备11041366号-13</span>
 			<span>浙公网安备：33010302003135号</span>
 		</div>
-		
 	</div>
+
 	<div class="bottomgap"></div>
 	
 	

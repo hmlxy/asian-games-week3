@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>赛事详情</title>
@@ -12,14 +12,12 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet"/>
 		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"/>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 		<!-- 引入resetcss -->
 		<link rel="stylesheet" href="css/event_css/common/Normalize.css">
 		<!-- 引入页面css -->
 		<link rel="stylesheet" href="css/event_css/event_game.css">
 		<link rel="stylesheet" href="css/event_css/event_game_mobile.css">
 		<link rel="stylesheet" href="css/event_css/event_game_ipad.css">
-
 		<!-- 引入jQuery -->
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
 		<!-- 引入页面js -->
@@ -28,61 +26,206 @@
 		<link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<link rel="stylesheet" href="css/event_css/common/swiper.css">
-</head>
-<body>
+	</head>
 
-		
+	<!-- 补充css -->
+	<style type="text/css">
+		/*背景图片*/
+		body {
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/bg-swim.jpeg");
+			background-size: contain;
+		}
 
+		.footer {
+			color:white !important;
+		}
+
+		.footer a {
+			color:white !important;
+		}
+
+		@media (max-width:1280px) {
+			body {
+				background-image: none;
+			}
+
+			.footer {
+				color:black !important;
+			}
+
+			.footer a {
+				color:black !important;
+			}
+		}
+
+	</style>
+
+
+	<body>
 		
-		<!-- 头部菜单栏 -->
-		<div class="container-fluid topnav text-center">
-			<div class="row align-items-center">
-				<div class="col-3">
-					<a  href="index.html">
-						<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/head_logo.png" class="asian_icon" alt="">
-					</a>
-				</div>
-				<div class="col-1"></div>
-				<div class="col-1">
-					<div class="topnav-evenbtn topnav-item">
-						<a  href="event.html">赛事</a>
-					</div>
-					
-				</div>
-				<div class="col-1">
-					<div class="topnav-schedulebtn topnav-item">
-						<a  href="schedule.html">赛程</a>
-					</div>
-				</div>
-				
-				
-				<div class="col-1">
-					<div class="topnav-adminbtn topnav-item">
-						<a  href="aboutus.html">aboutUS</a>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="row searchbtn ">
-						<div class="col-2"></div>
-						<div class="col-2">
-							<a href="event_game.html">
-								<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/btn_search.png" alt="">
-							</a>
-						</div>
-						<div class="col-3 ">
-							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
-						</div>
-						<div class="col-5"></div>
+		
+		<!-- 头部导航栏 -->
+		<style>
+			#chat-searchBtn {
+			z-index: 1;
+			padding: 10px;
+			background-color: #008CBA;
+			color: #fff;
+			cursor: pointer;
+			border-radius: 4px;
+			border: none;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			}
+			#chat-content {
+			position: fixed;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			display: none;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 4px;
+			box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+			z-index: 1;
+			width: 400px;
+			height: calc(100% - 20px); /* 留出按钮的位置 */
+			}
+			#chat-iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			box-sizing: border-box;
+			}
+			.nav-link{
+			font-size: 17px;
+			
+			
+			}
+			.navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 9999;
+			font-size: auto;
+			transition: top 0.3s ease-in-out;
+			}
+			.nav-link:hover{
+			transform: scale(1.2);
+			transition: transform 0.2s ease-in-out;
+			color:blue;
+			}
+			.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			
+			}
+			.logo {
+			filter: saturate(300%) contrast(120%);
+			}
+			.navbar-brand {
+			
+			width: 230px;
+			height: 50px;
+			background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/logo2.jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 20px;
+			}
+			.separator {
+			border-left: 1px solid #ccc;
+			margin-left: 15px;
+			margin-right: 15px;
+			height: 20px;
+			}
+			@media (max-width: 768px) {
+			.separator{
+				border-left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			height: 0;
+			}
+			.nav-item{
+				height: 30px;
+			}
+			.navbar-nav{
+				margin-bottom: 10px;
+			}
+			}
+		</style>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand logo" href="index.html"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav flex-nowrap">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">主页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">资讯</a>
+						</li>
 						
+						<li class="nav-item">
+							<a class="nav-link" href="#">赛事</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">场馆</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">短视频</a>
+						</li>
+					</ul>
+					
+					<div class="separator"></div>
+					<button id="chat-searchBtn" onclick="showContent()" class="btn btn-outline-secondary">Chat</button>
+					<div id="chat-content">
+						<button onclick="hideContent()" class="btn btn-outline-secondary">返回</button>
+						<iframe id="chat-iframe" src=""></iframe>
 					</div>
-				</div>
-				<div class="col-2">
-					<div class="aboutUS topnav-item">
-						<a id="admin">管理员</a>
-					</div>
+					<script>
+					function showContent() {
+					var url = "https://chatmindai.aabiji.com/#/chat/1684761047947";
+					var content = document.getElementById("chat-content");
+					var iframe = document.getElementById("chat-iframe");
+					iframe.src = url;
+					content.style.display = "block";
+					document.body.style.width = "70%";
+					document.querySelector(".navbar").style.width = "70%";
+					}
+					function hideContent() {
+					document.getElementById("chat-content").style.display = "none";
+					document.getElementById("chat-iframe").src = "";
+					document.body.style.width = "100%";
+					document.querySelector(".navbar").style.width = "100%";
+					}
+					</script>
+					
+					<div class="separator"></div>
+					<a>G430</a>
 				</div>
 			</div>
-		</div>
+		</nav>
+		//实现上滑出现导航栏
+		<script>
+		$(document).ready(function(){
+		var previousScroll = 0;
+		
+		$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		
+		if(currentScroll < previousScroll) {//意味着上滑
+		$('.navbar').css('top', '0');
+		} else {
+		$('.navbar').css('top', '-80px');
+		}
+		previousScroll = currentScroll;
+		});
+		});
+		</script>
 		
 		<!-- 头部视频 -->
 		<div class="top_video">
@@ -105,15 +248,13 @@
 					<img src="https://www.hangzhou2022.cn/sssg/ssxm/202203/W020220408393734711519.jpg" alt="" class="intro_img">
 					
 					<li class="intro_box">
-
 						<div class="intro_txt1 intro_txt">
 							<p>游泳是人在水的浮力作用下产生向上漂浮，凭借浮力通过肢体有规律的运动，使身体在水中有规律运动的技能。</p>
 							<p>17世纪60年代，英国不少地区的游泳活动就开展得相当活跃。</p>
 							<p>1828年，英国在利物浦乔治码头修造了第一个室内游泳池，这种泳池到19世纪30年代，在英国各大城市相继出现。</p>
 							<p>1837年，在英国伦敦成立了第一个游泳组织，同时举办了英国最早的游泳比赛。</p>
-
 						</div>
-							
+						
 						
 						
 						<div class="intro_txt2 intro_txt">
@@ -128,14 +269,161 @@
 			</div>
 			
 		</div>
+
+
+		<!-- 奖牌榜 -->
+		<main class="main" >
+			<!-- 项目奖牌 -->
+			<div class="event_medal">
+				<div class="event_total_medal">
+					<div class="total_medal-top">
+						<h1 class="total_medal_tle">项目国家榜</h1>
+						<input id="countryname" type="text" placeholder="输入国家名">
+					</div>
+					<div class="total_medal_schedule">
+						<table cellspacing="0" cellpadding="0" id="table_head">
+							<thead>
+								<tr>
+									<th width="80">名次</th>
+									<th width="180">国家/地区</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="80">铜</th>
+									<th width="82">总数</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="medel_range_table">
+								<tbody>
+									<tr>
+										<th width="80">1</th>
+										<th width="180">中国</th>
+										<th width="80">2</th>
+										<th width="80">2</th>
+										<th width="80">2</th>
+										<th width="80">6</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">日本</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">韩国</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">印度</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">菲律宾</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">越南</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+
+									<tr>
+										<th width="80">2</th>
+										<th width="180">新加坡</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+										<th width="80">0</th>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+				</div>
+				<div class="event_detail_medal">
+					<div class="detail_medal-top">
+						<h1 class="detail_medal_tle">项目奖牌榜</h1>
+						<input id="eventname" type="text" placeholder="输入项目名">
+					</div>
+					<div class="total_medal_schedule" id="table_head">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th width="80">日期</th>
+									<th width="80">时间</th>
+									<th width="180">项目名称</th>
+									<th width="80">金</th>
+									<th width="80">银</th>
+									<th width="82">铜</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar1">
+							<table cellspacing="0" cellpadding="0" id="event_medal_table">
+								<tbody>
+									<tr>
+										<th width="80">7-22</th>
+										<th width="80">09:00</th>
+										<th width="180">女子蝶泳游泳</th>
+										<th width="80">张雨菲</th>
+										<th width="80">叶诗文</th>
+										<th width="82">李冰洁</th>
+									</tr>
+
+									<tr>
+										<th width="80">7-22</th>
+										<th width="80">16:00</th>
+										<th width="180">男子自由泳</th>
+										<th width="80">孙杨</th>
+										<th width="80">潘展乐</th>
+										<th width="82">王浩宇</th>
+									</tr>
 		
-			
-				
+								</tbody>
+							</table>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		
+		
 		<!-- 赛事列表 -->
 		<div class="main">
 			<!-- 项目选择轮播 -->
 			<div class="event_list">
-				<h1>亚运项目</h1>
+				<div class="event_schedule-top" >
+					<h1 class="event_schedule_tle">项目赛程</h1>
+					<input class="schedule_eventname" id="evenserch" type="text" placeholder="输入项目名称">
+				</div>
 				<div class="swiper-event-box">
 					<div class="swiper-container" id="swiper-container-event">
 						<div class="swiper-wrapper" id="swiper-wrapper-event">
@@ -167,14 +455,13 @@
 												<p>游泳</p>
 											</div>
 										</li>
-
 										<li>
 											<a href="event_Go.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event24.jpg" alt=""></a>
 											<div class="select_img_txt_box">
 												<p>围棋</p>
 											</div>
 										</li>
-									
+										
 										
 										
 										
@@ -312,8 +599,7 @@
 												<p>武术</p>
 											</div>
 										</li>
-
-											<li>
+										<li>
 											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event6.jpg" alt=""></a>
 											<div class="select_img_txt_box">
 												<p>足球</p>
@@ -379,82 +665,188 @@
 			</div>
 		</div>
 
-		<!-- 冠军列表 -->
+		<!-- 项目赛程 -->
+		<div class="main">
+			<div class="event_schedule_and_medal" id="event_schedule_and_medal_new">
+				<div class="event_schedule " id="event_schedule_new">
+					<div class="event_schedule-top" >
+						<h1 class="event_schedule_tle">项目赛程</h1>
+						<input id="schedule_eventname" type="text" placeholder="输入项目或国家">
+					</div>
+					<div class="event_schedule_table">
+						<div class="day">
+							<!-- 表头 -->
+							<table cellspacing="0" cellpadding="0" width="100%">
+								<thead>
+									<tr>
+										<th width="100">时间</th>
+										<th width="119">大项</th>
+										<th width="198">比赛</th>
+										<th width="118">场馆</th>
+										<th width="89">比赛状态</th>
+										<th width="122">数据</th>
+									</tr>
+								</thead>
+							</table>
+							<!-- 项目赛程 -->
+							<div class="scrollbar_schedule" id="scrollbar_event_schedule">
+								<table cellspacing="0" cellpadding="0" width="100%" id="schedule_event_table">
+									<tbody id="event_list">
+										<tr>
+											<td width="100">7月23日 09:00</td>
+											<td width="120">游泳</td>
+											<td width="200">女子蝶泳16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月23日 09:00</td>
+											<td width="120">游泳</td>
+											<td width="200">男子蝶泳16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+										<tr>
+											<td width="100">7月24日 09:00</td>
+											<td width="120">游泳</td>
+											<td width="200">女子自由泳16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月24日 16:00</td>
+											<td width="120">游泳</td>
+											<td width="200">男子自由泳16强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td width="100">7月25日 09:00</td>
+											<td width="120">游泳</td>
+											<td width="200">女子蝶泳8强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+										<tr>
+											<td width="100">7月25日 09:00</td>
+											<td width="120">游泳</td>
+											<td width="200">男子蝶泳8强</td>
+											<td width="120">杭州奥体中心游泳馆</td>
+											<td width="90">未开始</td>
+											<td width="120">
+												<a target="blank" href="#">暂无</a>
+											</td>
+										</tr>
+										
+										
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-			<div class="main">
-			<!-- 项目选择轮播 -->
-			<div class="champion_list">
-				<h1>项目冠军</h1>
-				<div class="swiper-champion-box">
-					<div class="swiper-container" id="swiper-container-champion">
 
-						<div class="swiper-wrapper" >
-							<div class="swiper-slide">
-								<div class="champion_select">
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7%E8%8F%B2%E5%B0%94%E6%99%AE%E6%96%AF/4849141"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/feilipusi.jpg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>迈克尔·菲尔普斯</p>
-											<p>1985年6月30日出生于马里兰州巴尔的摩市</p>
-											<p>现已经退役</p>
-											<p>美国职业游泳运动员</p>
-											<p>2008年北京奥运8枚金牌</p>
-											<p>2012年伦敦奥运会4枚金牌。</p>
-											<p>2008北京奥运会单打亚军</p>
-	
-										</div>
-									</li>
-
-										<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E5%AD%99%E6%9D%A8/1012?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/sunyang.jpeg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>孙杨</p>
-											<p>1991年12月1日生于浙江杭州</p>
-											<p>现效力中国游泳队</p>
-											<p>中国男子游泳队运动员</p>
-											<p>男子1500米自由泳世界纪录保持者</p>
-											<p>男子400米自由泳奥运会纪录保持者</p>
-											<p>中国男子游泳19金孙杨独揽14枚</p>
-											
-										</div>
-									</li>
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E5%8F%B6%E8%AF%97%E6%96%87/5189987?fromModule=lemma_inlink">
-											<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/yeshiwen.jpg" alt="">
-										</a>
-										<div class="select_img_txt_box">
-											<p>叶诗文</p>
-											<p>1996年3月1日生于浙江省杭州市</p>
-											<p>现效力中国游泳队</p>
-											<p>中国女子游泳队运动员</p>
-											<p>女子200米混合泳奥运会纪录保持者</p>
-											<p>中国泳坛首个金满贯</p>
-											
-											
-											
-										</div>
-									</li>
-									
+	<!-- 冠军列表 -->
+	</div>
+	<div class="main">
+		<!-- 项目选择轮播 -->
+		<div class="champion_list">
+			<h1>项目冠军</h1>
+			<div class="swiper-champion-box">
+				<div class="swiper-container" id="swiper-container-champion">
+					<div class="swiper-wrapper" >
+						<div class="swiper-slide">
+							<div class="champion_select">
 								
-									
-									
-								</div>
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7%E8%8F%B2%E5%B0%94%E6%99%AE%E6%96%AF/4849141"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/feilipusi.jpg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>迈克尔·菲尔普斯</p>
+										<p>1985年6月30日出生于马里兰州巴尔的摩市</p>
+										<p>现已经退役</p>
+										<p>美国职业游泳运动员</p>
+										<p>2008年北京奥运8枚金牌</p>
+										<p>2012年伦敦奥运会4枚金牌。</p>
+										<p>2008北京奥运会单打亚军</p>
+										
+									</div>
+								</li>
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E5%AD%99%E6%9D%A8/1012?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/sunyang.jpeg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>孙杨</p>
+										<p>1991年12月1日生于浙江杭州</p>
+										<p>现效力中国游泳队</p>
+										<p>中国男子游泳队运动员</p>
+										<p>男子1500米自由泳世界纪录保持者</p>
+										<p>男子400米自由泳奥运会纪录保持者</p>
+										<p>中国男子游泳19金孙杨独揽14枚</p>
+										
+									</div>
+								</li>
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E5%8F%B6%E8%AF%97%E6%96%87/5189987?fromModule=lemma_inlink">
+										<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/yeshiwen.jpg" alt="">
+									</a>
+									<div class="select_img_txt_box">
+										<p>叶诗文</p>
+										<p>1996年3月1日生于浙江省杭州市</p>
+										<p>现效力中国游泳队</p>
+										<p>中国女子游泳队运动员</p>
+										<p>女子200米混合泳奥运会纪录保持者</p>
+										<p>中国泳坛首个金满贯</p>
+										
+										
+										
+									</div>
+								</li>
+								
+								
+								
 								
 							</div>
-							<div class="swiper-slide">
-								<div class="champion_select">
-									
-									<li>
-										<a target="_blank" href="https://baike.baidu.com/item/%E5%BC%A0%E9%9B%A8%E9%9C%8F/12589518?fr=po_ala"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/zhangyufei.jpg" alt=""></a>
-										<div class="select_img_txt_box">
-											<p>张雨霏</p>
-											<p>1998年4月19日出生于江苏徐州</p>
-											<p>现效力中国游泳队</p>
-											<p>中国女子游泳运动员</p>
-											<p>2018雅加达亚运会蝶泳金牌混合泳金牌</p>
-											<P>2019世界军人运动会金牌/P>
+							
+						</div>
+						<div class="swiper-slide">
+							<div class="champion_select">
+								
+								<li>
+									<a target="_blank" href="https://baike.baidu.com/item/%E5%BC%A0%E9%9B%A8%E9%9C%8F/12589518?fr=po_ala"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/zhangyufei.jpg" alt=""></a>
+									<div class="select_img_txt_box">
+										<p>张雨霏</p>
+										<p>1998年4月19日出生于江苏徐州</p>
+										<p>现效力中国游泳队</p>
+										<p>中国女子游泳运动员</p>
+										<p>2018雅加达亚运会蝶泳金牌混合泳金牌</p>
+										<P>2019世界军人运动会金牌/P>
 											<p>22020东京奥运会200米蝶泳金牌</p>
 											
 										</div>
@@ -465,7 +857,7 @@
 											<p>刘湘</p>
 											<p>1996年9月1日出生于广东广州</p>
 											<p>现效力中国游泳队</p>
-											<p>中国女子游泳运动员</p>											
+											<p>中国女子游泳运动员</p>
 											<P>女子50米仰泳世界纪录保持者 </P>
 											<p>2018雅加达亚运会50米仰泳金牌</p>
 											<P>2019国际游泳世界杯50米仰泳摘金</P>
@@ -480,7 +872,7 @@
 											<p>2002年3月3日出生于河北省保定市</p>
 											<p>现效力中国游泳队</p>
 											<p>中国女子游泳运动员</p>
-										
+											
 											<p>2017国际泳联世界杯400米自由泳冠军</p>
 											<p>2021短池游泳世锦赛800米自由泳夺冠</p>
 											
@@ -492,28 +884,23 @@
 								
 							</div>
 						</div>
-
 						<div class="swiper-pagination" id="pagination-champion"></div>
 						<div class="swiper-button-prev" id="swiper-champion-prev"></div>
 						<div class="swiper-button-next" id="swiper-champion-next"></div>
-
 					</div>
 				</div>
 				
 			</div>
 		</div>
-
 		<!-- 底部联系和更多支持 -->
 		<div class="footer main">
-			<div class="footer_line"></div>
+			<!-- <div class="footer_line"></div> -->
 			<div class="footer-content">
-
 				<div class="footer-content-lt">
 					<p>2022年第19届亚运会杭师大开发小组</p>
 					<p>中国浙江省杭州市余杭区杭师大仓前校区</p>
 					<p>邮编：310016</p>
 					<p>联系方式：hml2535541929@163.com</p>
-
 					<div class="sjmt_box">
 						<div>
 							<img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive">
@@ -531,44 +918,39 @@
 							<img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive">
 							<img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img">
 						</div>
-
 						<div class="linkbox">
 							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="">
 							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="">
 							<img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="">
 							<img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="">
 						</div>
-					</div>	
-
+					</div>
 				</div>
-
 				<!-- hover切换图片 -->
 				<script type="text/javascript">
 					$(document).ready(function() {
-					  // 当鼠标移动到包含图片的div上时
-					  $('.sjmt_box div').hover(function() {
-					    // 使用toggleClass()方法切换.active类
-					    $(this).find('.sjmt_img').toggleClass('disactive');
-					  });
+					// 当鼠标移动到包含图片的div上时
+					$('.sjmt_box div').hover(function() {
+					// 使用toggleClass()方法切换.active类
+					$(this).find('.sjmt_img').toggleClass('disactive');
+					});
 					});
 				</script>
-
 				<!-- hover显示二维码 -->
 				<script>
 					$(document).ready(function() {
-					  // 当鼠标移动到包含图片的div上时
-					  $('.sjmt_box div').mouseenter(function() {
-					    // 获取当前div的索引
-					    var index = $(this).index();
-					    // 显示相应的二维码
-					    $('.linkbox img').eq(index).show();
-					  }).mouseleave(function() {
-					    // 隐藏所有二维码
-					    $('.linkbox img').hide();
-					  });
+					// 当鼠标移动到包含图片的div上时
+					$('.sjmt_box div').mouseenter(function() {
+					// 获取当前div的索引
+					var index = $(this).index();
+					// 显示相应的二维码
+					$('.linkbox img').eq(index).show();
+					}).mouseleave(function() {
+					// 隐藏所有二维码
+					$('.linkbox img').hide();
+					});
 					});
 				</script>
-
 				<div class="footer-content-rt">
 					<li>
 						<a href="https://olympics.com/en/">国际奥委会</a>
@@ -586,8 +968,6 @@
 				</div>
 				
 			</div>
-
-
 			<div class="footer-rt-bottom">
 				<p>Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved</p>
 				<span>备案号：浙ICP备11041366号-13</span>
@@ -595,11 +975,8 @@
 			</div>
 			
 		</div>
-
 		<div class="bottomgap"></div>
-
 		
-
 		
-</body>
+	</body>
 </html>
