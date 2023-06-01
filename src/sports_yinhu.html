@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>富阳银湖体育中心</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sportshall_css/fuyang_css.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        /* 标题修饰 */
+        
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 900;
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            margin: 60px auto 0;
+            font-family: Arial, Helvetica, sans-serif;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-radius: 30px;
+            width: 1100px;
+            height: 120px;
+            line-height: 120px;
+        }
+        /* 运动线条动画 */
+        
+        .line-wrapper {
+            width: 300px;
+            height: 120px;
+            margin: auto;
+            position: relative;
+        }
+        
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #0084FF;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: 2s ease-in-out alternate infinite running run-line;
+            animation-delay: calc(var(--delay, 0) * 1s);
+        }
+        
+        .line:before,
+        .line:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #0084FF;
+            position: absolute;
+            top: -10px;
+        }
+        
+        .line:before {
+            left: -10px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        
+        .line:after {
+            right: -10px;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        /* 运动字体动画 */
+        
+        .text {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+            color: #0084FF;
+            animation: 2s ease-in-out alternate infinite running run-text;
+            animation-delay: calc(var(--delay, 0) * 1s);
+        }
+        
+        @keyframes run-text {
+            from {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+        }
+        
+        @keyframes run-line {
+            from {
+                transform: translateY(-50%);
+            }
+            to {
+                transform: translateY(-50%) translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <video src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/sporthall/%E5%AF%8C%E9%98%B3%E9%93%B6%E6%B9%96.mp4" muted autoplay controls width="100%"></video>
+    <!-- 打开网页就自动播放 -->
+    <h1>场馆介绍</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">1</div>
+    </div>
+
+    <section class="container">
+        <div class="row">
+            <div class="intro col-xs-6">
+                <img src="https://img1.baidu.com/it/u=53318102,1718474749&fm=253&fmt=auto&app=138&f=JPEG?w=897&h=500" alt=" " class="center ">
+                <p class="title ">富阳银湖体育中心</p>
+                <p class="cont ">场馆设计从《富春山居图》尾段的山形轮廓中取材，营造了一个开合有致、深邃含蓄的中国园林式景观空间。3.4万余片旋转百叶，在阳光的照射下，呈现出一幅光影效果的《富春山居图》，随着太阳角度的变换，画作也会有所不同。承办杭州亚运会射击、射箭、现代五项三大项目，预计产生47枚金牌.
+                </p>
+                <div class="row1 ">
+                    <div class="blue-line "></div>
+                    <p>场馆结构采用传统飞檐斗拱的建构理念</p>
+                </div>
+                <div class="row2 ">
+                    <div class="blue-line "></div>
+                    <p>微微反曲的屋顶悬挑而出，充分向外舒展。</p>
+                </div>
+                <div class="more ">
+                    <a href="# ">更多</a>
+                </div>
+            </div>
+            <!-- <img src="https://img2.baidu.com/it/u=2393532589,1174098939&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=426" alt=" " class="map col-xs-6"> -->
+            <div class="map col-xs-6">
+                <img src="https://img2.baidu.com/it/u=459584192,2741514530&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt=" ">
+            </div>
+        </div>
+    </section>
+    <h1>场馆实拍</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">2</div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="swiper">
+        <ul>
+            <li><img src="https://www.hangzhou2022.cn/sssg/sscg/202203/W020220330537680223808.jpg" alt=""></li>
+            <li><img src="https://img2.baidu.com/it/u=98726410,4035279550&fm=253&fmt=auto&app=120&f=JPEG?w=400&h=225" alt=""></li>
+            <li><img src="https://img0.baidu.com/it/u=1786549697,398121550&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=428" alt=""></li>
+            <li><img src="https://img1.baidu.com/it/u=1703284316,4250717223&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281" alt=""></li>
+            <li><img src="https://img0.baidu.com/it/u=1174484571,3308793995&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500" alt=""></li>
+        </ul>
+        <!-- <div class="bbox">
+            <button class="btn">向左轮播</button>
+            <button class="btn">向右轮播</button>
+        </div> -->
+    </div>
+
+    <h1>竞技项目</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">3</div>
+    </div>
+    <div class="foot">
+        <div class="pro-box">
+            <img src="https://www.hangzhou2022.cn/sssg/sscg/yhtyzx/202203/W020220330610709537149.png" alt="">
+            <p>射击</p>
+        </div>
+        <div class="pro-box">
+            <img src="https://www.hangzhou2022.cn/sssg/sscg/yhtyzx/202203/W020220330611464922746.png" alt="">
+            <p>射箭</p>
+        </div>
+        <div class="pro-box">
+            <img src="https://www.hangzhou2022.cn/sssg/sscg/yhtyzx/202203/W020220330612294823916.png" alt="">
+            <p>现代五项</p>
+        </div>
+    </div>
+    <!-- 底部联系和更多支持 -->
+    <div class="footer main">
+        <div class="footer_line"></div>
+        <div class="footer-content">
+
+            <div class="footer-content-lt">
+                <p>2022年第19届亚运会杭师大开发小组</p>
+                <p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+                <p>邮编：310016</p>
+                <p>联系方式：hml2535541929@163.com</p>
+
+                <div class="sjmt_box">
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive">
+                        <img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img">
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive">
+                        <img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img">
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive">
+                        <img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img">
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive">
+                        <img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img">
+                    </div>
+
+                    <div class="linkbox">
+                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="">
+                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="">
+                        <img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="">
+                        <img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- hover切换图片 -->
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    // 当鼠标移动到包含图片的div上时
+                    $('.sjmt_box div').hover(function() {
+                        // 使用toggleClass()方法切换.active类
+                        $(this).find('.sjmt_img').toggleClass('disactive');
+                    });
+                });
+            </script>
+
+            <!-- hover显示二维码 -->
+            <script>
+                $(document).ready(function() {
+                    // 当鼠标移动到包含图片的div上时
+                    $('.sjmt_box div').mouseenter(function() {
+                        // 获取当前div的索引
+                        var index = $(this).index();
+                        // 显示相应的二维码
+                        $('.linkbox img').eq(index).show();
+                    }).mouseleave(function() {
+                        // 隐藏所有二维码
+                        $('.linkbox img').hide();
+                    });
+                });
+            </script>
+
+            <div class="footer-content-rt">
+                <li>
+                    <a href="https://olympics.com/en/">国际奥委会</a>
+                </li>
+                <li>
+                    <a href="https://ocasia.org/">亚奥理事会</a>
+                </li>
+                <li>
+                    <a href="http://www.olympic.cn/">中奥理事会</a>
+                </li>
+                <li>
+                    <a href="https://www.sport.gov.cn/">国家体育总局</a>
+                </li>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-rt-bottom">
+            <p>Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved</p>
+            <span>备案号：浙ICP备11041366号-13</span>
+            <span>浙公网安备：33010302003135号</span>
+        </div>
+
+    </div>
+    <script src="js/sportshall_js/fuyang_js.js"></script>
+</body>
+
+</html>

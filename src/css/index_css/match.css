@@ -1,0 +1,28 @@
+.match-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.match-image-box {
+    width: 20%;
+    padding: 1%;
+    box-sizing: border-box;
+    position: relative;
+}
+.match-image-box img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+.match-image-box:hover img {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .match-image-box {
+        width: 33.3333%;
+    }
+   
+    .match-image-box:nth-last-child(1) {
+        display: none;
+}
+}

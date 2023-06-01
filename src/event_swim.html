@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>赛事详情</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- 引入bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet"/>
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- 引入resetcss -->
+		<link rel="stylesheet" href="css/event_css/common/Normalize.css">
+		<!-- 引入页面css -->
+		<link rel="stylesheet" href="css/event_css/event_game.css">
+		<link rel="stylesheet" href="css/event_css/event_game_mobile.css">
+		<link rel="stylesheet" href="css/event_css/event_game_ipad.css">
+
+		<!-- 引入jQuery -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
+		<!-- 引入页面js -->
+		<script src="js/event_js/event_game.js"></script>
+		<!-- 引入swiper轮播图 -->
+		<link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="css/event_css/common/swiper.css">
+</head>
+<body>
+
+		
+
+		
+		<!-- 头部菜单栏 -->
+		<div class="container-fluid topnav text-center">
+			<div class="row align-items-center">
+				<div class="col-3">
+					<a  href="index.html">
+						<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/head_logo.png" class="asian_icon" alt="">
+					</a>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-1">
+					<div class="topnav-evenbtn topnav-item">
+						<a  href="event.html">赛事</a>
+					</div>
+					
+				</div>
+				<div class="col-1">
+					<div class="topnav-schedulebtn topnav-item">
+						<a  href="schedule.html">赛程</a>
+					</div>
+				</div>
+				
+				
+				<div class="col-1">
+					<div class="topnav-adminbtn topnav-item">
+						<a  href="aboutus.html">aboutUS</a>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="row searchbtn ">
+						<div class="col-2"></div>
+						<div class="col-2">
+							<a href="event_game.html">
+								<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/btn_search.png" alt="">
+							</a>
+						</div>
+						<div class="col-3 ">
+							<input  type="text" name="evenserch" id="evenserch" value="电子竞技" placeholder="请输入项目名称">
+						</div>
+						<div class="col-5"></div>
+						
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="aboutUS topnav-item">
+						<a id="admin">管理员</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 头部视频 -->
+		<div class="top_video">
+			<video src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/swimvideo.mp4"controls  muted>
+			</video>
+		</div>
+		<!-- 赛事介绍 -->
+		<div class="main" >
+			<p class="event_tle">杭州亚运会项目-游泳</p>
+			
+			<!-- 赛事内容 -->
+			<div class="event_intro">
+				<div class="event_intro_tle">
+					<h1 >游泳</h1>
+					<h1 >游泳是在水中‘飞翔’的运动</h1>
+				</div>
+				
+				<div class="intro_cnt">
+					
+					<img src="https://www.hangzhou2022.cn/sssg/ssxm/202203/W020220408393734711519.jpg" alt="" class="intro_img">
+					
+					<li class="intro_box">
+
+						<div class="intro_txt1 intro_txt">
+							<p>游泳是人在水的浮力作用下产生向上漂浮，凭借浮力通过肢体有规律的运动，使身体在水中有规律运动的技能。</p>
+							<p>17世纪60年代，英国不少地区的游泳活动就开展得相当活跃。</p>
+							<p>1828年，英国在利物浦乔治码头修造了第一个室内游泳池，这种泳池到19世纪30年代，在英国各大城市相继出现。</p>
+							<p>1837年，在英国伦敦成立了第一个游泳组织，同时举办了英国最早的游泳比赛。</p>
+
+						</div>
+							
+						
+						
+						<div class="intro_txt2 intro_txt">
+							<p>1896年，游泳被列为奥运会竞赛项目。</p>
+							<p>游泳的最高组织机构是国际游泳联合会，总部设在瑞士洛桑。</p>
+							<p>1908年由比利时、丹麦、芬兰、法国、德国、英国、匈牙利和瑞典游泳协会倡议成立。</p>
+						</div>
+						<a target="_blank" class="intro_more" href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80/190403?fr=aladdin">了解更多</a>
+					</li>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+			
+				
+		<!-- 赛事列表 -->
+		<div class="main">
+			<!-- 项目选择轮播 -->
+			<div class="event_list">
+				<h1>亚运项目</h1>
+				<div class="swiper-event-box">
+					<div class="swiper-container" id="swiper-container-event">
+						<div class="swiper-wrapper" id="swiper-wrapper-event">
+							<div class="swiper-slide">
+								<div class="event_select">
+									<div class="event_select_top">
+										<li>
+											<a href="event_esport.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event4.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>电子竞技</p>
+											</div>
+										</li>
+										<li>
+											<a href="event_ping.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event9.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>乒乓球</p>
+											</div>
+										</li>
+										<li>
+											<a href="event_diving.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event30.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>跳水</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="event_swim.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event28.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>游泳</p>
+											</div>
+										</li>
+
+										<li>
+											<a href="event_Go.html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event24.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>围棋</p>
+											</div>
+										</li>
+									
+										
+										
+										
+										
+									</div>
+									<div class="event_select_bottom">
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event5.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>田径</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event7.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>铁人三项</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event8.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>水球</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event10.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>花样游泳</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event3.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>排球</p>
+											</div>
+										</li>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="swiper-slide">
+								<div class="event_select">
+									<div class="event_select_top">
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event11.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>三人制篮球</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event12.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>沙滩排球</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event13.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>霹雳舞</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event14.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>现代五项</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event15.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>山地自行车</p>
+											</div>
+										</li>
+										
+									</div>
+									<div class="event_select_bottom">
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event16.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>跆拳道</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event17.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>摔跤</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event18.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>柔道</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event19.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>柔术</p>
+											</div>
+											
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event20.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>克柔术</p>
+											</div>
+										</li>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="swiper-slide">
+								<div class="event_select">
+									<div class="event_select_top">
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event21.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>击剑</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event22.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>空手道</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event23.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>武术</p>
+											</div>
+										</li>
+
+											<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event6.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>足球</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event25.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>象棋</p>
+											</div>
+										</li>
+										
+									</div>
+									<div class="event_select_bottom">
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event26.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>艺术体操</p>
+											</div>
+										</li>
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event27.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>射箭</p>
+											</div>
+										</li>
+										
+										<li>
+											<a href="#"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event29.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>赛艇</p>
+											</div>
+											
+										</li>
+										<li>
+											<a href="#html"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event2.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>五人制篮球</p>
+											</div>
+										</li>
+										<li>
+											<a href="#html" alt="">
+											<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_img/event1.jpg" alt=""></a>
+											<div class="select_img_txt_box">
+												<p>拳击</p>
+											</div>
+										</li>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</div>
+						<div class="swiper-pagination" id="pagination-event"></div>
+						<div class="swiper-button-prev" id="swiper-event-prev"></div>
+						<div class="swiper-button-next" id="swiper-event-next"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 冠军列表 -->
+		</div>
+			<div class="main">
+			<!-- 项目选择轮播 -->
+			<div class="champion_list">
+				<h1>项目冠军</h1>
+				<div class="swiper-champion-box">
+					<div class="swiper-container" id="swiper-container-champion">
+
+						<div class="swiper-wrapper" >
+							<div class="swiper-slide">
+								<div class="champion_select">
+									
+									<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7%E8%8F%B2%E5%B0%94%E6%99%AE%E6%96%AF/4849141"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/feilipusi.jpg" alt=""></a>
+										<div class="select_img_txt_box">
+											<p>迈克尔·菲尔普斯</p>
+											<p>1985年6月30日出生于马里兰州巴尔的摩市</p>
+											<p>现已经退役</p>
+											<p>美国职业游泳运动员</p>
+											<p>2008年北京奥运8枚金牌</p>
+											<p>2012年伦敦奥运会4枚金牌。</p>
+											<p>2008北京奥运会单打亚军</p>
+	
+										</div>
+									</li>
+
+										<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E5%AD%99%E6%9D%A8/1012?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/sunyang.jpeg" alt=""></a>
+										<div class="select_img_txt_box">
+											<p>孙杨</p>
+											<p>1991年12月1日生于浙江杭州</p>
+											<p>现效力中国游泳队</p>
+											<p>中国男子游泳队运动员</p>
+											<p>男子1500米自由泳世界纪录保持者</p>
+											<p>男子400米自由泳奥运会纪录保持者</p>
+											<p>中国男子游泳19金孙杨独揽14枚</p>
+											
+										</div>
+									</li>
+									
+									<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E5%8F%B6%E8%AF%97%E6%96%87/5189987?fromModule=lemma_inlink">
+											<img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/yeshiwen.jpg" alt="">
+										</a>
+										<div class="select_img_txt_box">
+											<p>叶诗文</p>
+											<p>1996年3月1日生于浙江省杭州市</p>
+											<p>现效力中国游泳队</p>
+											<p>中国女子游泳队运动员</p>
+											<p>女子200米混合泳奥运会纪录保持者</p>
+											<p>中国泳坛首个金满贯</p>
+											
+											
+											
+										</div>
+									</li>
+									
+								
+									
+									
+								</div>
+								
+							</div>
+							<div class="swiper-slide">
+								<div class="champion_select">
+									
+									<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E5%BC%A0%E9%9B%A8%E9%9C%8F/12589518?fr=po_ala"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/zhangyufei.jpg" alt=""></a>
+										<div class="select_img_txt_box">
+											<p>张雨霏</p>
+											<p>1998年4月19日出生于江苏徐州</p>
+											<p>现效力中国游泳队</p>
+											<p>中国女子游泳运动员</p>
+											<p>2018雅加达亚运会蝶泳金牌混合泳金牌</p>
+											<P>2019世界军人运动会金牌/P>
+											<p>22020东京奥运会200米蝶泳金牌</p>
+											
+										</div>
+									</li>
+									<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E5%88%98%E6%B9%98/15893777?fromModule=lemma_search-box"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/liuxiang.jpg" alt=""></a>
+										<div class="select_img_txt_box">
+											<p>刘湘</p>
+											<p>1996年9月1日出生于广东广州</p>
+											<p>现效力中国游泳队</p>
+											<p>中国女子游泳运动员</p>											
+											<P>女子50米仰泳世界纪录保持者 </P>
+											<p>2018雅加达亚运会50米仰泳金牌</p>
+											<P>2019国际游泳世界杯50米仰泳摘金</P>
+											
+										</div>
+									</li>
+									
+									<li>
+										<a target="_blank" href="https://baike.baidu.com/item/%E6%9D%8E%E5%86%B0%E6%B4%81/5711473?fr=aladdin"><img src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/event_img/event_img/event_swim/libinjie.jpg" alt=""></a>
+										<div class="select_img_txt_box">
+											<p>李冰洁</p>
+											<p>2002年3月3日出生于河北省保定市</p>
+											<p>现效力中国游泳队</p>
+											<p>中国女子游泳运动员</p>
+										
+											<p>2017国际泳联世界杯400米自由泳冠军</p>
+											<p>2021短池游泳世锦赛800米自由泳夺冠</p>
+											
+										</div>
+									</li>
+									
+									
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="swiper-pagination" id="pagination-champion"></div>
+						<div class="swiper-button-prev" id="swiper-champion-prev"></div>
+						<div class="swiper-button-next" id="swiper-champion-next"></div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<!-- 底部联系和更多支持 -->
+		<div class="footer main">
+			<div class="footer_line"></div>
+			<div class="footer-content">
+
+				<div class="footer-content-lt">
+					<p>2022年第19届亚运会杭师大开发小组</p>
+					<p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+					<p>邮编：310016</p>
+					<p>联系方式：hml2535541929@163.com</p>
+
+					<div class="sjmt_box">
+						<div>
+							<img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive">
+							<img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img">
+						</div>
+						<div>
+							<img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive">
+							<img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img">
+						</div>
+						<div>
+							<img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive">
+							<img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img">
+						</div>
+						<div>
+							<img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive">
+							<img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img">
+						</div>
+
+						<div class="linkbox">
+							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="">
+							<img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="">
+							<img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="">
+							<img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="">
+						</div>
+					</div>	
+
+				</div>
+
+				<!-- hover切换图片 -->
+				<script type="text/javascript">
+					$(document).ready(function() {
+					  // 当鼠标移动到包含图片的div上时
+					  $('.sjmt_box div').hover(function() {
+					    // 使用toggleClass()方法切换.active类
+					    $(this).find('.sjmt_img').toggleClass('disactive');
+					  });
+					});
+				</script>
+
+				<!-- hover显示二维码 -->
+				<script>
+					$(document).ready(function() {
+					  // 当鼠标移动到包含图片的div上时
+					  $('.sjmt_box div').mouseenter(function() {
+					    // 获取当前div的索引
+					    var index = $(this).index();
+					    // 显示相应的二维码
+					    $('.linkbox img').eq(index).show();
+					  }).mouseleave(function() {
+					    // 隐藏所有二维码
+					    $('.linkbox img').hide();
+					  });
+					});
+				</script>
+
+				<div class="footer-content-rt">
+					<li>
+						<a href="https://olympics.com/en/">国际奥委会</a>
+					</li>
+					<li>
+						<a href="https://ocasia.org/">亚奥理事会</a>
+					</li>
+					<li>
+						<a href="http://www.olympic.cn/">中奥理事会</a>
+					</li>
+					<li>
+						<a href="https://www.sport.gov.cn/">国家体育总局</a>
+					</li>
+					
+				</div>
+				
+			</div>
+
+
+			<div class="footer-rt-bottom">
+				<p>Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved</p>
+				<span>备案号：浙ICP备11041366号-13</span>
+				<span>浙公网安备：33010302003135号</span>
+			</div>
+			
+		</div>
+
+		<div class="bottomgap"></div>
+
+		
+
+		
+</body>
+</html>

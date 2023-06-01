@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2023-05-08 17:30:34
+ * @version $Id$
+ */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: #purple;
+}
+
+a:hover {
+	color: #3E4ECA;
+}
+
+a:active {
+	color: #purple;
+}

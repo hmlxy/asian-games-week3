@@ -1,0 +1,431 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2023-05-04 18:20:22
+ * @version $Id$
+ */
+
+ 
+
+
+.main {
+	margin: 0 auto;
+	width: 1200px;
+}
+
+
+  
+.topnav {
+	height: 84px;
+	font-size: 24px;
+	background-color: white;
+}
+
+.asian_icon {
+	height: 70px;
+	padding: 0;
+}
+
+.topnav-item {
+	color: grey;
+	transition: border-radius 2s,
+	background-color 1s;
+	
+}
+
+.topnav-item:hover {
+	color: white;
+	border-radius: 20px;
+	background-color: #3E4ECA;
+}
+
+.topnav-item a {
+	color: grey ;
+}
+
+.topnav-item a:hover {
+	color: white ;
+}
+
+input[type="text"] {
+  border: 2px solid #ddd;
+  color: grey;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-link{
+	font-size: 17px;
+	
+	
+}
+.nav-link:hover{
+	transform: scale(1.2);
+	transition: transform 0.2s ease-in-out;
+	color:blue;
+}
+
+.zx_title a {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 42px;
+	color: black;
+}
+
+.zx_title2 {
+	margin-top: 20px;
+}
+
+.zx_title2-text span:first-child {
+	padding: 4px 6px;
+	font-size: 12px;
+	color: white;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #3E4ECA;
+}
+
+.mainwidth {
+	position: relative;
+  width: 90%;
+  max-width: 1000px;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	
+  }
+
+.zx_title_img {
+	display: flex;
+	justify-content: center;
+	margin: 5% 0;
+}
+
+.swiper-text-box1 h1 a {
+	font-size: 36px;
+	font-weight: bold;
+	position: absolute;
+	top: 200px;
+	left: 550px
+}
+
+.swiper-text-box1 h2 a {
+	font-size: 28px;
+	position: absolute;
+	top: 260px;
+	left: 550px
+}
+
+.zx_more1 {
+	position: absolute;
+	top: 320px;
+	left: 550px
+}
+
+.swiper-text-box2 h1 a {
+	font-size: 36px;
+	font-weight: bold;
+	position: absolute;
+	top: 100px;
+	left: 120px
+}
+
+.swiper-text-box2 h2 a {
+	font-size: 28px;
+	position: absolute;
+	top: 160px;
+	left: 120px
+}
+
+.zx_more2 {
+	position: absolute;
+	top: 240px;
+	left: 120px
+}
+
+
+.swiper-text-box3 h1 a {
+	font-size: 36px;
+	font-weight: bold;
+	position: absolute;
+	top: 40px;
+	left: 800px
+}
+
+.swiper-text-box3 h2 a {
+	font-size: 28px;
+	position: absolute;
+	top: 100px;
+	left: 800px
+}
+
+.zx_more3 {
+	position: absolute;
+	top: 160px;
+	left: 800px
+}
+
+.athlete-img {
+	object-fit: contain;
+	height: auto;
+	width: 100%;
+  }
+  
+.new-left {
+	height: 800px;
+}
+
+.new-left img {
+	width: 100%;
+	height: 400px;
+}
+
+.new-left h1 a {
+	color: black;
+}
+
+.new-left-time {
+	margin-top: 40px;
+	color: grey;
+}
+
+.zx_more4 img{
+	width: 200px;
+	height: 40px;
+	margin-top: 80px;
+
+}
+
+.new-right-top img {
+	width: 100%;
+	height: 300px;
+}
+
+.new-right-top h4 {
+	margin-top: 20px;
+}
+
+.new_more {
+	display:inline-block;
+	justify-content: center;
+	height: 100%;
+	margin-top: 50px;
+}
+
+.new_more2 {
+	display:inline-block;
+	justify-content: center;
+	height: 100%;
+	margin-top: 50px;
+}
+
+.vo_title_img {
+	display: flex;
+	justify-content: center;
+	margin: 5% 0;
+}
+
+.active{
+	height: 400px;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	font-size: auto;
+}
+
+.separator {
+	border-left: 1px solid #ccc;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 20px;
+}
+.navbar-brand {
+	
+	width: 230px;
+	height: 50px;
+	background-image: url("https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/index/logo2.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 20px;
+}
+.logo {
+filter: saturate(300%) contrast(120%);
+}
+@media (max-width: 500px) {
+  .container2 {
+    display: none;
+  }
+}
+.zx_title a {
+   font-size: 3.5vw;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .zx_title a {
+     font-size: 24px; /* 在小屏幕上，字体大小固定为24像素 */
+  }
+}
+
+@media (max-width: 480px) {
+  .zx_title a {
+    font-size: 4.5vw; /* 在非常小的屏幕上，字体大小增加到4.5vw */
+  }
+}
+@media (max-width: 600px) {
+  .new_more {
+    position: relative;
+    transform: translateY(-270%);
+  }
+}
+
+#carouselExampleIndicators {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+ }
+
+ .carousel-inner {
+   
+   height:400px;
+ 
+}
+.carousel-item{
+	height:250px;
+}
+.carousel-item img {
+  margin: auto;
+}
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 400px;
+  width: 15%;
+  z-index: 10;
+  
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background-color: #575555;
+  padding: 20px;
+  border-radius: 50%;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+
+#carouselExampleIndicators .carousel-item {
+  height: 500px; /* 设置高度为 500px 或其他值 */
+}
+
+
+.carousel-caption {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: rgb(12, 12, 12);
+  
+  padding: 10px;
+}
+.carousel-caption h5,
+.carousel-caption p {
+  margin-bottom: 0;
+}
+.carousel-caption h5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+#con{
+	position: relative;
+	width: 100%;
+	height: 200px;
+    overflow: hidden;
+}
+#con img{
+	width: 300px;
+	height: 200px;
+    padding-right:20px;
+	border-radius: 50px;
+}
+#con li{
+	width: 300px;
+	list-style: none;
+	float: left;
+	
+	
+}
+#con ul{
+	position: absolute;
+	left: 0;
+	width: 1600px;
+	height: 190px;
+
+}
+@media (max-width: 768px) {
+	#con {
+		height:100px;
+	}
+	#con img{
+		height: 100px;
+		width: 150px;
+		border-radius: 30px;
+		padding-right: 0;
+	}
+	#con li{
+		width:150px;
+
+	}
+}
+
+#show {
+		position: relative;
+		width: 100%;
+		height: 320px; /* 大区域高度 */
+		background-color: #ffffff;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+	#show img {
+		max-width: 50%; /* 图片最大宽度 */
+		max-height: 100%; /* 图片最大高度 */
+		object-fit: contain;
+		padding-right: 20px;
+		margin-left: 0;
+		padding-left: 50px;
+	}
+	#show p {
+		font-size: 24px;
+		line-height: 32px;
+		margin-right: 100px; /* 文字与图片的间距 */
+	}
+
+
+
+	/*底部联系和更多支持*/
+	
+	

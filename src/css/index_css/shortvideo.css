@@ -1,0 +1,133 @@
+ .shortvideo-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 400px;
+        }
+
+        .shortvideo-video-container {
+            position: relative;
+        }
+
+        .shortvideo-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+           border-radius: 15px;
+        }
+
+        .shortvideo-text {
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            padding: 5px;
+            width: calc(50% - 10px);
+        }
+.container4{
+    display:flex;
+    height: auto;
+    margin-top: 5px;
+}
+        .shortvideo-main-video {
+            width: calc(50% - 10px);
+			height:100%;
+			margin:5px;
+            margin-bottom: 0;
+        }
+        
+        .shortvideo-small-video {
+            width: calc(50% - 10px);
+			height:100%;
+            margin:5px;
+        }
+        .shortvideo-video-small-container{
+			width: 50%;
+			height:400px;
+		}
+		
+		.shortvideo-video-small-container-small{
+			height:50%;
+			display: flex;
+            justify-content: space-between;
+           
+		}
+		@media(max-width:600px){
+            .shortvideo-new_more2 {
+                position: relative;
+                transform: translateY(350%);
+              }
+        }
+
+        @media (max-width: 768px) {
+            
+             .shortvideo-small-video {
+                width: 100%;
+				height:auto;
+				
+            }
+			.shortvideo-main-video{
+                width: 50%;
+				height:auto;
+			}
+            .shortvideo-video-small-container{
+			width: 100%;
+			height:auto;
+		}
+            .shortvideo-text {
+                transform: translateY(-100%);
+                background-color: transparent;
+                margin-left: 10px;
+                color:black;
+            }
+			.shortvideo-video-small-container-small{
+				display: inline-block;
+				width: 50%;
+				height: auto;
+                margin-bottom:0px;
+                padding-bottom: 0;
+			}
+            
+			.shortvideo-video{
+				display: inline;
+				height:100px;
+			}
+			.shortvideo-text {
+            display: inline;
+        
+        }
+        .container4{
+           display: none;
+        }
+        }
+        #shortvideo-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#shortvideo-video-box {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.shortvideo-fullscreen-video {
+  width: 100%;
+  height: auto;
+}
+
+#shortvideo-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
