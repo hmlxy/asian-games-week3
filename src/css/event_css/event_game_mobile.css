@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+/**
+*
+* @authors Your Name (you@example.org)
+* @date    2023-05-13 13:42:26
+* @version $Id$
+*/
+html {
+	font-size: 16px;
+}
+
+body {
+	color: black;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+@media (min-width:320px) and (max-width:640px) {
+	body {
+		background-color: white;
+		width: 100%;
+	}
+
+	.asian_icon {
+		margin-top: 20%;
+		margin-left: 50%;
+		height: 4rem;
+		color: white;
+	}
+
+	.topnav-item {
+		display: none;
+	}
+
+	.searchbtn {
+		display: none;
+	}
+
+	.event_tle {
+		height: 3rem;
+		line-height: 3rem;
+		text-align: center;
+		margin: 1rem auto;
+		color: white;
+		font-size: 1rem;
+		width: 100%;
+		border-radius: 2rem;
+		background-color: #2C68DB;
+	}
+
+	.top_video {
+		margin-top: 1.5rem;
+	}
+
+	/*头部视频*/
+	.top_video video {
+		width: 100%;
+		height: 20rem;
+	}
+
+	/*	赛事介绍*/
+	.event_intro {
+		position: relative;
+		padding: 0.5rem 1rem;
+		height: 29rem;
+		border-radius: 1rem;
+		color: black;
+		background-color: #F4E1CA;
+		overflow: hidden;
+	}
+
+	.event_intro_tle {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		color: #2677F0;
+	}
+
+	.event_intro_tle h1:first-child {
+		display: none;
+	}
+
+	.event_intro_tle h1:last-child {
+		text-align: center;
+		font-weight: bolder;
+		font-size: 1.2rem;
+		margin: 0.4rem 0;
+	}
+
+	.intro_cnt {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 350px;
+	}
+
+	.intro_cnt img {
+		flex: 1;
+		width: 14rem;
+		height: 14rem;
+		border-radius: 0.8rem;
+	}
+
+	.intro_txt1 {
+		margin-top: 0.5rem;
+		font-size: 0.8rem;
+	}
+
+	.intro_txt1 p:nth-child(2) {
+		display: none;
+	}
+
+	.intro_txt1 p:nth-child(3) {
+		display: none;
+	}
+
+	.intro_txt2 {
+		display: none;
+	}
+
+	.intro_more {
+		position: absolute;
+		top: 95%;
+		cursor: pointer;
+		font-size: 0.8rem;
+		color: #2677F0;
+	}
+
+	/*	赛事轮播*/
+	.event_list {
+		margin-top: 1rem;
+		height: 18rem;
+		width: 100%;
+	}
+
+	/*设置swiper的显示区域*/
+	.swiper-event-box {
+		height: 15rem;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.event_list h1 {
+		text-align: center;
+		font-weight: bolder;
+		font-size: 1.2rem;
+		margin: 0.4rem 0;
+		color: #2677F0;
+	}
+
+	.event_select {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 5rem;
+		width: 100%;
+	}
+
+	.event_select_top {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.event_select_bottom {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.event_select li {
+		flex: 1;
+		height: 6rem;
+		padding: 5px 0;
+		border-radius: 10px;
+	}
+
+	.event_select img {
+		flex: 1;
+		height: 4rem;
+		padding: 0 0.5rem;
+	}
+
+	/*设置swiper的换页器*/
+	#pagination-event {
+		position: absolute;
+		top: 16rem;
+	}
+
+	#swiper-event-prev {
+		display: none;
+	}
+
+	#swiper-event-next {
+		display: none;
+	}
+
+	.select_img_txt_box {
+		position: absolute;
+		font-size: 0.6rem;
+		top: 82%;
+		width: 100%;
+		text-align: center;
+	}
+
+	/*	冠军轮播*/
+	.champion_list {
+		margin-top: 1rem;
+		height: 38rem;
+	}
+
+	.champion_list h1 {
+		text-align: center;
+		font-weight: bolder;
+		margin: 0.4rem 0;
+		font-size: 1.2rem;
+		color: #2677F0;
+		background-color: #F4E1CA;
+	}
+
+	/*	设置显示区域*/
+	.swiper-champion-box {
+		height: 40rem;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.champion_select {
+		display: flex;
+		justify-content: center;
+		height: 32rem;
+	}
+
+	.champion_select li {
+		position: relative;
+		height: 100%;
+		border-radius: 10px;
+	}
+
+	.champion_select li img {
+		flex: 1;
+		width: 12rem;
+		height: 20rem;
+	}
+
+	.champion_select li .select_img_txt_box {
+		position: absolute;
+		font-size: 0.8rem;
+		top: 54%;
+		width: 100%;
+		color: white;
+		text-align: center;
+	}
+
+	#pagination-champion {
+		position: absolute;
+		top: 94%;
+	}
+
+	#swiper-champion-prev {
+		display: none;
+	}
+
+	#swiper-champion-next {
+		display: none;
+	}
+
+	.select_img_txt_box p:nth-child(5) {
+		display: none;
+	}
+
+	/*底部更多和支持*/
+	.footer-content-rt {
+		display: none;
+	}
+
+	.footer-rt-bottom span {
+		float: left;
+	}
+
+	.linkbox {
+		position: absolute;
+		left: 20%;
+		top: 30%;
+	}
+
+	.bottomgap {
+		height: 3rem;
+	}
+
+	/*	奖牌榜*/
+	.event_medal {
+		display: flex;
+		flex-direction: column;
+		height: 800px;
+	}
+
+	#countryname {
+		margin: 20px 0;
+		flex: 1;
+		height: 40px;
+		width: 5rem;
+		border-radius: 20px;
+	}
+
+	#eventname {
+		margin: 20px 0;
+		flex: 1;
+		height: 40px;
+		width: 5rem;
+		border-radius: 20px;
+	}
+
+	.detail_medal_tle {
+		display: none;
+	}
+
+	.total_medal_tle {
+		display: none;
+	}
+
+	.total_medal_schedule {
+		background-color: #F4E1CA;
+	}
+
+	.scrollbar1 {
+		height: 14rem;
+	}
+
+	.scrollbar1 tr {
+		text-align: center;
+		height: 60px;
+		background-color: #F4E1CA;
+	}
+
+	#table_head th {
+		font-size: 1rem;
+	}
+
+	.scrollbar1 th {
+		border-right: 1px solid #E1A46B;
+		border-top: 1px solid #E1A46B;
+		border-bottom: 1px solid #E1A46B;
+	}
+
+	.scrollbar1 tr:last-child {
+		border-bottom: 1px solid #E1A46B;
+	}
+
+	/*	项目赛程表*/
+	.event_schedule_table {
+	}
+
+	.scrollbar_event_schedule {
+		height: 42rem;
+	}
+
+	.event_schedule_tle {
+		display: none;
+	}
+
+	.event_schedule input {
+		margin-top: 20px;
+		padding: 20px 20px;
+		font-size: 1rem;
+	}
+
+	#schedule_eventname {
+		flex: 1;
+		height: 40px;
+		border-radius: 20px;
+		width: 5rem;
+	}
+
+	/*	总的赛程表*/
+	
+	.schedule_serch {
+		display: flex;
+		height: 50px;
+	}
+
+	.serch_circle {
+		border: 2px solid grey;
+		border-radius: 10px;
+		margin: 10px 0;
+		padding: 0;
+		width: 6.5rem;
+		height: 40px;
+		line-height: 40px;
+		font-size: 12px;
+		color: black;
+		background-color: white;
+	}
+
+	#event_schedule_total {
+		height: 40rem;
+	}
+
+	.serch_btn {
+		display: none;
+	}
+
+	#selectbox {
+		font-size: 0.5rem;
+		font-weight: bold;
+		width: 6rem;
+		border: none;
+		outline: none;
+	}
+
+	option {
+		padding: 5px;
+		font-size: 12px;
+		background-color: #fff;
+		color: #000;
+	}
+
+	.event_schedule_table table th {
+		font-size: 1rem;
+	}
+
+	.event_schedule_table table td {
+		font-size: 0.5rem;
+	}
+
+}
