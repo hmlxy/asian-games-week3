@@ -1,95 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>杭州奥体网球中心</title>
     <!-- 引入bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/wangqiu_css/wangqiu_css.css" />
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav flex-nowrap">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">主页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">资讯</a>
-                    </li>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav flex-nowrap">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">主页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">资讯</a>
+            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">赛事</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">场馆</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">短视频</a>
-                    </li>
-                </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">赛事</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">场馆</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">短视频</a>
+            </li>
+          </ul>
 
-                <div class="separator"></div>
-                <button id="chat-searchBtn" onclick="showContent()" class="btn btn-outline-secondary">
+          <div class="separator"></div>
+          <button
+            id="chat-searchBtn"
+            onclick="showContent()"
+            class="btn btn-outline-secondary"
+          >
             Chat
           </button>
-                <div id="chat-content">
-                    <button onclick="hideContent()" class="btn btn-outline-secondary">
+          <div id="chat-content">
+            <button onclick="hideContent()" class="btn btn-outline-secondary">
               返回
             </button>
-                    <iframe id="chat-iframe" src=""></iframe>
-                </div>
-                <div class="separator"></div>
-                <a>G430</a>
-            </div>
+            <iframe id="chat-iframe" src=""></iframe>
+          </div>
+          <div class="separator"></div>
+          <a>G430</a>
         </div>
+      </div>
     </nav>
 
     <h1 class="heading">场馆介绍</h1>
     <div class="line-wrapper">
-        <div class="line"></div>
-        <div class="text" style="--delay: 0.5s">1</div>
+      <div class="line"></div>
+      <div class="text" style="--delay: 0.5s">1</div>
     </div>
 
-    <video src="https://vd2.bdstatic.com/mda-pepfjyjc82cmycm4/720p/h264/1684926031016868781/mda-pepfjyjc82cmycm4.mp4?v_from_s=hkapp-haokan-nanjing&auth_key=1685023379-0-0-7eafd43e5649c0f6e16d270aa804274e&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=1979144243&vid=13910450116873537446&abtest=109133_1-110193_1-110348_2&klogid=1979144243"
-        muted autoplay controls width="100%"></video>
+    <video
+      src="https://vd2.bdstatic.com/mda-pepfjyjc82cmycm4/720p/h264/1684926031016868781/mda-pepfjyjc82cmycm4.mp4?v_from_s=hkapp-haokan-nanjing&auth_key=1685023379-0-0-7eafd43e5649c0f6e16d270aa804274e&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=1979144243&vid=13910450116873537446&abtest=109133_1-110193_1-110348_2&klogid=1979144243"
+      muted
+      autoplay
+      controls
+      width="100%"
+    ></video>
 
     <section class="intro">
-        <div class="title">奥体网球中心</div>
-        <div class="cont">
-            杭州奥体中心网球中心，又称“小莲花”，位于浙江省杭州市滨江区、杭州奥体中心东南侧，始建于2017年，为2022年杭州亚运会网球比赛场馆。杭州奥体中心网球中心总建筑面积5.23万平方米，总席数1.56万座，设一个10000座的加盖决赛场地（小莲花）、两个2000座的半决赛场地、八片预赛场地、十片练习场地和四片室内场地。 2020年，“小莲花”获“中国钢结构金奖”，并获得国际网联二星认证。2021年，“小莲花”被专家组评定为世界首创的浙江大学罗尧治团队研发的“现代空间结构体系创新、关键技术与工程应用”获得国家科学技术进步奖一等奖。
-        </div>
-        <img src="https://img0.baidu.com/it/u=142113566,356504768&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt=" " class="map" />
+      <div class="title">奥体网球中心</div>
+      <div class="cont">
+        杭州奥体中心网球中心，又称“小莲花”，位于浙江省杭州市滨江区、杭州奥体中心东南侧，始建于2017年，为2022年杭州亚运会网球比赛场馆。杭州奥体中心网球中心总建筑面积5.23万平方米，总席数1.56万座，设一个10000座的加盖决赛场地（小莲花）、两个2000座的半决赛场地、八片预赛场地、十片练习场地和四片室内场地。
+        2020年，“小莲花”获“中国钢结构金奖”，并获得国际网联二星认证。2021年，“小莲花”被专家组评定为世界首创的浙江大学罗尧治团队研发的“现代空间结构体系创新、关键技术与工程应用”获得国家科学技术进步奖一等奖。
+      </div>
+      <img
+        src="https://img0.baidu.com/it/u=142113566,356504768&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+        alt=" "
+        class="map"
+      />
     </section>
 
     <h1>场馆实拍</h1>
     <div class="line-wrapper">
-        <div class="line"></div>
-        <div class="text" style="--delay: 0.5s">2</div>
+      <div class="line"></div>
+      <div class="text" style="--delay: 0.5s">2</div>
     </div>
     <!-- 轮播图 -->
     <div class="swiper">
-        <ul>
-            <li><img src="https://img2.baidu.com/it/u=3266496669,2657189884&fm=253&fmt=auto&app=138&f=JPEG?w=776&h=500" alt=""></li>
-            <li><img src="https://img1.baidu.com/it/u=75205126,498043471&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt=""></li>
-            <li><img src="https://img1.baidu.com/it/u=2702941033,2288004533&fm=253&fmt=auto&app=120&f=JPEG?w=739&h=500" alt=""></li>
-            <li><img src="https://img2.baidu.com/it/u=3629868220,3966686291&fm=253&fmt=auto&app=138&f=PNG?w=500&h=269" alt=""></li>
-            <li><img src="https://img0.baidu.com/it/u=3292326348,2577313239&fm=253&fmt=auto&app=138&f=JPEG?w=550&h=366" alt=""></li>
-        </ul>
-        <!-- <div class="bbox">
+      <ul>
+        <li>
+          <img
+            src="https://img2.baidu.com/it/u=3266496669,2657189884&fm=253&fmt=auto&app=138&f=JPEG?w=776&h=500"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://img1.baidu.com/it/u=75205126,498043471&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://img1.baidu.com/it/u=2702941033,2288004533&fm=253&fmt=auto&app=120&f=JPEG?w=739&h=500"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://img2.baidu.com/it/u=3629868220,3966686291&fm=253&fmt=auto&app=138&f=PNG?w=500&h=269"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://img0.baidu.com/it/u=3292326348,2577313239&fm=253&fmt=auto&app=138&f=JPEG?w=550&h=366"
+            alt=""
+          />
+        </li>
+      </ul>
+      <!-- <div class="bbox">
             <button class="btn">向左轮播</button>
             <button class="btn">向右轮播</button>
         </div> -->
@@ -97,79 +149,129 @@
 
     <h1>竞技项目</h1>
     <div class="line-wrapper">
-        <div class="line"></div>
-        <div class="text" style="--delay: 0.5s">3</div>
+      <div class="line"></div>
+      <div class="text" style="--delay: 0.5s">3</div>
     </div>
     <div class="foot">
-        <div class="pro-box">
-            <img src="https://www.hangzhou2022.cn/sssg/sscg/wqzx/202203/W020220329570855027274.png" alt="">
-            <p>网球</p>
-        </div>
-        <div class="pro-box">
-            <img src="https://www.hangzhou2022.cn/sssg/sscg/wqzx/202203/W020220329569006849808.png" alt="">
-            <p>软式网球</p>
-        </div>
+      <div class="pro-box">
+        <img
+          src="https://www.hangzhou2022.cn/sssg/sscg/wqzx/202203/W020220329570855027274.png"
+          alt=""
+        />
+        <p>网球</p>
+      </div>
+      <div class="pro-box">
+        <img
+          src="https://www.hangzhou2022.cn/sssg/sscg/wqzx/202203/W020220329569006849808.png"
+          alt=""
+        />
+        <p>软式网球</p>
+      </div>
     </div>
 
     <!-- 底部联系和更多支持 -->
     <div class="footer main">
-        <div class="footer_line"></div>
-        <div class="footer-content">
-            <div class="footer-content-lt">
-                <p>2022年第19届亚运会G430</p>
-                <p>中国浙江省杭州市余杭区杭师大仓前校区</p>
-                <p>邮编：310016</p>
-                <p>联系方式：hml2535541929@163.com</p>
-                <div class="sjmt_box">
-                    <div>
-                        <img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive" />
-                        <img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img" />
-                    </div>
-                    <div>
-                        <img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive" />
-                        <img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img" />
-                    </div>
-                    <div>
-                        <img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive" />
-                        <img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img" />
-                    </div>
-                    <div>
-                        <img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive" />
-                        <img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img" />
-                    </div>
-                    <div class="linkbox">
-                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="" />
-                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="" />
-                        <img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="" />
-                        <img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="" />
-                    </div>
-                </div>
+      <div class="footer_line"></div>
+      <div class="footer-content">
+        <div class="footer-content-lt">
+          <p>2022年第19届亚运会G430</p>
+          <p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+          <p>邮编：310016</p>
+          <p>联系方式：hml2535541929@163.com</p>
+          <div class="sjmt_box">
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_wb_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_wb_f.png"
+                alt=""
+                class="sjmt_img"
+              />
             </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_wx_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_wx_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_dy_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_dy_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://www.hangzhou2022.cn/images/03icon_tt_f.png"
+                alt=""
+                class="sjmt_img disactive"
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/04icon_tt_f.png"
+                alt=""
+                class="sjmt_img"
+              />
+            </div>
+            <div class="linkbox">
+              <img
+                src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg"
+                alt=""
+              />
+              <img
+                src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
 
-            <div class="footer-content-rt">
-                <li>
-                    <a href="https://olympics.com/en/">国际奥委会</a>
-                </li>
-                <li>
-                    <a href="https://ocasia.org/">亚奥理事会</a>
-                </li>
-                <li>
-                    <a href="http://www.olympic.cn/">中奥理事会</a>
-                </li>
-                <li>
-                    <a href="https://www.sport.gov.cn/">国家体育总局</a>
-                </li>
-            </div>
+        <div class="footer-content-rt">
+          <li>
+            <a href="https://olympics.com/en/">国际奥委会</a>
+          </li>
+          <li>
+            <a href="https://ocasia.org/">亚奥理事会</a>
+          </li>
+          <li>
+            <a href="http://www.olympic.cn/">中奥理事会</a>
+          </li>
+          <li>
+            <a href="https://www.sport.gov.cn/">国家体育总局</a>
+          </li>
         </div>
-        <div class="footer-rt-bottom">
-            <p>
-                Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved
-            </p>
-            <span>备案号：浙ICP备11041366号-13</span>
-            <span>浙公网安备：33010302003135号</span>
-        </div>
+      </div>
+      <div class="footer-rt-bottom">
+        <p>
+          Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee
+          All Rights Reserved
+        </p>
+        <span>备案号：浙ICP备11041366号-13</span>
+        <span>浙公网安备：33010302003135号</span>
+      </div>
     </div>
     <script src="js/wangqiu_js/wangqiu_js.js"></script>
-</body>
-
+  </body>
 </html>
