@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>杭州电竞中心</title>
+    <!-- 引入bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/dianjing_css/dianjing_css.css" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">资讯</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">赛事</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">场馆</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">短视频</a>
+                    </li>
+                </ul>
+
+                <div class="separator"></div>
+                <button id="chat-searchBtn" onclick="showContent()" class="btn btn-outline-secondary">
+            Chat
+          </button>
+                <div id="chat-content">
+                    <button onclick="hideContent()" class="btn btn-outline-secondary">
+              返回
+            </button>
+                    <iframe id="chat-iframe" src=""></iframe>
+                </div>
+                <div class="separator"></div>
+                <a>G430</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 场馆部分 -->
+    <h1 class="heading">场馆介绍</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">1</div>
+    </div>
+
+    <video src="https://hml-asian-games-web.oss-cn-hangzhou.aliyuncs.com/sporthall/video.mp4" muted autoplay controls width="100%"></video>
+
+    <section class="intro">
+        <div class="title">杭州电竞中心</div>
+        <div class="cont">
+            外形酷似“星际战舰”,连外立面都是满满科技感.从空中俯瞰，场馆就像一艘“星际战舰”盘踞在生态公园内，与电竞比赛的科幻感、未来感非常契合。 场馆以“星际漩涡”为设计理念，三条主步道作“骨架”，环绕核心旋转上升，形成双曲面异形结构，宛如星云中的恒星。 场馆主体结构为钢结构，中央场馆屋盖采用索承网格结构，由48榀变截面实腹钢梁及斜柱与内部钢管混凝土柱进行连接，形成整体。场馆结构形式与建筑造型融合，创造出一座蕴涵着运动诗意的建筑。场馆外立面由定制的阳极氧化铝板和电动变色玻璃天窗组成，是中国国内最大的异型曲面阳极氧化铝板单体建筑
+        </div>
+        <img src="https://img0.baidu.com/it/u=3056062119,416753693&fm=253&fmt=auto&app=138&f=JPEG?w=926&h=500" alt=" " class="map" />
+    </section>
+
+    <h1>场馆实拍</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">2</div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="swiper">
+        <ul>
+            <li><img src="https://img0.baidu.com/it/u=2949596577,2159232530&fm=253&fmt=auto&app=120&f=JPEG?w=660&h=372" alt=""></li>
+            <li><img src="https://img2.baidu.com/it/u=1260936671,1857106527&fm=253&fmt=auto&app=120&f=JPEG?w=400&h=300" alt=""></li>
+            <li><img src="https://img1.baidu.com/it/u=2045074823,4254003240&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313" alt=""></li>
+            <li><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2Fa1e2bddb-c9d6-4fd8-af6d-8d7ff9c6ad5c%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1687588849&t=6fb7cb3be3ea6ff8c16c6c60393e5aad"
+                    alt=""></li>
+            <li><img src="https://img0.baidu.com/it/u=2704418680,2452081345&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500" alt=""></li>
+        </ul>
+        <!-- <div class="bbox">
+            <button class="btn">向左轮播</button>
+            <button class="btn">向右轮播</button>
+        </div> -->
+    </div>
+
+    <h1>竞技项目</h1>
+    <div class="line-wrapper">
+        <div class="line"></div>
+        <div class="text" style="--delay: 0.5s">3</div>
+    </div>
+    <div class="foot">
+        <div class="pro-box">
+            <img src="https://www.hangzhou2022.cn/sssg/sscg/hzdjzx/202203/W020220330642437534963.png" alt="" />
+            <p>电竞</p>
+        </div>
+    </div>
+
+    <!-- 底部联系和更多支持 -->
+    <div class="footer main">
+        <div class="footer_line"></div>
+        <div class="footer-content">
+            <div class="footer-content-lt">
+                <p>2022年第19届亚运会G430</p>
+                <p>中国浙江省杭州市余杭区杭师大仓前校区</p>
+                <p>邮编：310016</p>
+                <p>联系方式：hml2535541929@163.com</p>
+                <div class="sjmt_box">
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_wb_f.png" alt="" class="sjmt_img disactive" />
+                        <img src="https://www.hangzhou2022.cn/images/04icon_wb_f.png" alt="" class="sjmt_img" />
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_wx_f.png" alt="" class="sjmt_img disactive" />
+                        <img src="https://www.hangzhou2022.cn/images/04icon_wx_f.png" alt="" class="sjmt_img" />
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_dy_f.png" alt="" class="sjmt_img disactive" />
+                        <img src="https://www.hangzhou2022.cn/images/04icon_dy_f.png" alt="" class="sjmt_img" />
+                    </div>
+                    <div>
+                        <img src="https://www.hangzhou2022.cn/images/03icon_tt_f.png" alt="" class="sjmt_img disactive" />
+                        <img src="https://www.hangzhou2022.cn/images/04icon_tt_f.png" alt="" class="sjmt_img" />
+                    </div>
+                    <div class="linkbox">
+                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wb_erweima.png" alt="" />
+                        <img src="https://www.hangzhou2022.cn/images/hzwyyh_wx_erweima.jpg" alt="" />
+                        <img src="https://www.hangzhou2022.cn/images/ewm_douyin.jpg" alt="" />
+                        <img src="https://www.hangzhou2022.cn/images/ewm_toutiao.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content-rt">
+                <li>
+                    <a href="https://olympics.com/en/">国际奥委会</a>
+                </li>
+                <li>
+                    <a href="https://ocasia.org/">亚奥理事会</a>
+                </li>
+                <li>
+                    <a href="http://www.olympic.cn/">中奥理事会</a>
+                </li>
+                <li>
+                    <a href="https://www.sport.gov.cn/">国家体育总局</a>
+                </li>
+            </div>
+        </div>
+        <div class="footer-rt-bottom">
+            <p>
+                Copyright © The 19th Asian Games Hangzhou 2022 Organising Committee All Rights Reserved
+            </p>
+            <span>备案号：浙ICP备11041366号-13</span>
+            <span>浙公网安备：33010302003135号</span>
+        </div>
+    </div>
+
+    <script src="js/fuyang_js/fuyang_js.js"></script>
+</body>
+
+</html>
